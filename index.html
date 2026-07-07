@@ -167,6 +167,7 @@ nav.menu a.active{color:var(--action-2);}
 .svc-card .overlay-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(42,20,32,.75),transparent 60%);}
 .svc-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,var(--action-1),var(--action-2));color:#fff;font-size:12px;font-weight:700;padding:7px 13px;border-radius:9999px;animation:pulseBadge 2s infinite;}
 .svc-badge.soon{background:#8a8a8a;animation:none;}
+.svc-card:has(.svc-badge.soon) img{filter:sepia(35%) saturate(90%) hue-rotate(-8deg) brightness(0.98) contrast(1.02);}
 @keyframes pulseBadge{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
 .svc-card .body{padding:22px 22px 26px;}
 .svc-card h3{font-size:19px;margin-bottom:8px;}
