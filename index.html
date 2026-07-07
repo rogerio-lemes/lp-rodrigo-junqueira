@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica de Estética em Bragança Paulista | Clinica Cristina Mello</title>
+<meta name="description" content="Clínica de Estética em Bragança Paulista com tratamentos faciais, corporais, spa e programas para noivas. Nota 4.8 no Google. Agende pelo WhatsApp (11) 99997-4094.">
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="Bragança Paulista">
+<meta name="geo.position" content="-22.9526;-46.5427">
+<meta name="ICBM" content="-22.9526, -46.5427">
+<link rel="canonical" href="https://clinicacristinamello.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Clínica de Estética em Bragança Paulista | Clinica Cristina Mello">
+<meta property="og:description" content="Tratamentos faciais, corporais, spa e programas para noivas em Bragança Paulista. Nota 4.8 no Google.">
+<meta property="og:image" content="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/hero-1783360807136.png">
+<meta property="og:url" content="https://clinicacristinamello.vercel.app/">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#3A1830">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Clinica Cristina Mello - Estética Avançada",
+  "image": "https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/hero-1783360807136.png",
+  "telephone": "+55 11 99997-4094",
+  "url": "https://clinicacristinamello.vercel.app/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bragança Paulista", "addressRegion": "SP", "addressCountry": "BR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": "-22.9526", "longitude": "-46.5427" },
+  "areaServed": ["Bragança Paulista", "SP", "região metropolitana"],
+  "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-12:00",
+  "priceRange": "$$",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "80" }
+}
+</script>
+<!-- CNPJ exibido no rodapé é demonstrativo, para fins deste template -->
+<style>
+:root{
+  --bg:#FBF8F6;
+  --ink:#2A1420;
+  --ink-soft:#6B5A63;
+  --primary:#3A1830;
+  --primary-2:#5C2749;
+  --action-1:#D98A4E;
+  --action-2:#8F4A22;
+  --gold:#C9962F;
+  --line:#E7DDD6;
+  --white:#FFFFFF;
+  --soft:#F3ECE7;
+  --radius-sm:12px;
+  --radius-md:16px;
+  --radius-lg:18px;
+  --shadow-sm:0 2px 10px rgba(42,20,32,.07);
+  --shadow-md:0 12px 34px rgba(42,20,32,.12);
+  --container:1200px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+h1,h2,h3,h4{margin:0;font-weight:800;letter-spacing:-0.01em;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px;}
+.section{padding:96px 0;}
+@media(max-width:768px){.section{padding:64px 0;}}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--action-2);}
+.hl{background:linear-gradient(135deg,var(--action-1),var(--action-2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.section-head{max-width:640px;margin:0 0 48px;}
+.section-head.center{margin:0 auto 48px;text-align:center;}
+h2.title{font-size:clamp(1.8rem,4vw,2.6rem);}
+.arc{display:block;margin-top:10px;}
+.arc.center{margin-left:auto;margin-right:auto;}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 32px;border-radius:12px;font-weight:700;font-size:16px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease;white-space:nowrap;}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow-sm);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.btn-action{background:linear-gradient(135deg,var(--action-1),var(--action-2));color:#fff;box-shadow:var(--shadow-sm);}
+.btn-action:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary);height:44px;}
+.btn-outline:hover{background:var(--primary);color:#fff;}
+.btn-outline-white{background:transparent;border:2px solid #fff;color:#fff;height:44px;}
+.btn-outline-white:hover{background:#fff;color:var(--primary);}
+.btn-block{width:100%;}
+
+/* Pills / badges */
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--soft);border-radius:9999px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--primary);}
+.badge-tag{display:inline-flex;align-items:center;gap:6px;background:var(--soft);border-radius:9999px;padding:8px 14px;font-size:13px;font-weight:600;color:var(--ink-soft);}
+
+/* Icons */
+.icn{width:26px;height:26px;stroke:var(--action-2);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+
+/* Frame / signature element */
+.framed{position:relative;display:inline-block;line-height:0;}
+.framed img{border-radius:var(--radius-lg);}
+.framed::before,.framed::after,.framed .fc1,.framed .fc2{content:'';position:absolute;width:34px;height:34px;border-color:var(--action-1);}
+.framed::before{top:-10px;left:-10px;border-top:3px solid var(--action-1);border-left:3px solid var(--action-1);border-radius:6px 0 0 0;}
+.framed::after{bottom:-10px;right:-10px;border-bottom:3px solid var(--action-1);border-right:3px solid var(--action-1);border-radius:0 0 6px 0;}
+.framed .fc1{top:-10px;right:-10px;border-top:3px solid var(--action-2);border-right:3px solid var(--action-2);border-radius:0 6px 0 0;}
+.framed .fc2{bottom:-10px;left:-10px;border-bottom:3px solid var(--action-2);border-left:3px solid var(--action-2);border-radius:0 0 0 6px;}
+
+/* Header */
+.topbar{background:var(--primary);color:#fff;font-size:12.5px;padding:7px 0;}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.topbar a{color:#fff;opacity:.9;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+header.site{position:sticky;top:0;z-index:200;background:rgba(251,248,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:box-shadow .3s ease,border-color .3s ease;}
+header.site.scrolled{box-shadow:0 4px 20px rgba(42,20,32,.08);border-bottom:1px solid var(--line);}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:88px;}
+.logo{display:flex;flex-direction:column;line-height:1.1;}
+.logo b{font-size:20px;font-weight:800;color:var(--primary);}
+.logo span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--action-2);font-weight:600;}
+nav.menu{display:flex;align-items:center;gap:36px;}
+nav.menu a{font-size:14.5px;font-weight:600;color:var(--ink);position:relative;padding:4px 0;}
+nav.menu a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--action-1);transition:width .25s ease;}
+nav.menu a:hover::after,nav.menu a.active::after{width:100%;}
+nav.menu a.active{color:var(--action-2);}
+.nav-actions{display:flex;align-items:center;gap:14px;}
+.hamburger{display:none;flex-direction:column;gap:5px;width:32px;height:32px;align-items:center;justify-content:center;z-index:250;}
+.hamburger span{width:24px;height:2.5px;background:var(--primary);transition:all .3s ease;}
+.hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+.drawer{position:fixed;top:0;right:-100%;width:82%;max-width:340px;height:100vh;background:#fff;z-index:240;box-shadow:-10px 0 30px rgba(0,0,0,.15);transition:right .35s ease;padding:100px 28px 28px;overflow-y:auto;}
+.drawer.open{right:0;}
+.drawer a{display:block;padding:14px 0;font-size:17px;font-weight:600;border-bottom:1px solid var(--line);}
+.drawer .btn{margin-top:22px;}
+.overlay-dim{position:fixed;inset:0;background:rgba(42,20,32,.5);z-index:230;opacity:0;visibility:hidden;transition:opacity .3s ease;}
+.overlay-dim.open{opacity:1;visibility:visible;}
+@media(max-width:900px){nav.menu{display:none;}.hamburger{display:flex;}}
+
+/* Hero */
+.hero{background:linear-gradient(to bottom right,#F6EFEA,#FBF8F6,#EFE3DA);padding:64px 0 0;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+.hero h1{font-size:clamp(2rem,4.4vw,3.3rem);line-height:1.12;}
+.hero p.lead{margin-top:20px;font-size:17.5px;color:var(--ink-soft);max-width:520px;}
+.hero-ctas{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;}
+.hero-img{position:relative;}
+.hero-img img{width:100%;height:560px;object-fit:cover;object-position:center 25%;border-radius:24px;}
+.badges-bar{margin-top:52px;padding:26px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;}
+.badges-bar .pill{background:#fff;box-shadow:var(--shadow-sm);}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;}.hero-img img{height:380px;}.hero-img{order:-1;}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat{text-align:center;padding:28px 12px;border:1px solid var(--line);border-radius:var(--radius-md);}
+.stat b{display:block;font-size:clamp(1.8rem,3vw,2.4rem);color:var(--primary);font-weight:800;}
+.stat span{font-size:13.5px;color:var(--ink-soft);font-weight:600;}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr);}}
+
+/* Cards grid services */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.svc-card{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);background:#fff;transition:transform .3s ease,box-shadow .3s ease;}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.svc-card .img-wrap{position:relative;height:230px;overflow:hidden;}
+.svc-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.svc-card:hover img{transform:scale(1.05);}
+.svc-card .overlay-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(42,20,32,.75),transparent 60%);}
+.svc-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,var(--action-1),var(--action-2));color:#fff;font-size:12px;font-weight:700;padding:7px 13px;border-radius:9999px;animation:pulseBadge 2s infinite;}
+.svc-badge.soon{background:#8a8a8a;animation:none;}
+@keyframes pulseBadge{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
+.svc-card .body{padding:22px 22px 26px;}
+.svc-card h3{font-size:19px;margin-bottom:8px;}
+.svc-card p{font-size:14.5px;color:var(--ink-soft);}
+@media(max-width:1024px){.cards-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.cards-grid{grid-template-columns:1fr;}}
+
+.tags-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+
+/* Journey */
+.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.journey .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:32px;position:relative;}
+.journey .num{font-size:14px;font-weight:800;color:var(--action-2);letter-spacing:.06em;}
+.journey h3{font-family:'Montserrat',sans-serif;font-size:20px;margin:14px 0 10px;}
+.journey p{color:var(--ink-soft);font-size:14.5px;}
+@media(max-width:900px){.journey{grid-template-columns:1fr;}}
+
+/* Benefits two columns */
+.benefits-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.benefit-list{display:flex;flex-direction:column;gap:16px;}
+.benefit-item{display:flex;gap:14px;align-items:flex-start;}
+.benefit-item .icn{margin-top:2px;}
+.benefit-item h4{font-size:16px;margin-bottom:4px;}
+.benefit-item p{font-size:14px;color:var(--ink-soft);}
+@media(max-width:900px){.benefits-wrap{grid-template-columns:1fr;}}
+
+/* Mid CTA bordered */
+.mid-cta{border:2px solid var(--primary);border-radius:var(--radius-lg);padding:48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+.mid-cta h3{font-size:24px;max-width:480px;}
+.mid-cta .actions{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* Contact/capture section */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.attendant-box{text-align:left;}
+.attendant-box .framed img{width:100%;height:460px;object-fit:cover;}
+.attendant-name{margin-top:30px;font-size:16px;font-weight:700;}
+.form-card{background:#fff;border-radius:var(--radius-md);box-shadow:var(--shadow-md);padding:40px;}
+.form-card h3{font-size:22px;margin-bottom:22px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--ink-soft);}
+.field input,.field select{width:100%;height:48px;border:1.5px solid var(--line);border-radius:10px;padding:0 16px;font-family:inherit;font-size:15px;background:var(--bg);}
+.field input:focus,.field select:focus{outline:none;border-color:var(--action-1);}
+.lgpd-note{font-size:12.5px;color:var(--ink-soft);margin:14px 0 18px;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+
+/* Testimonials */
+.testi-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:36px;}
+.testi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:24px;}
+.stars{color:var(--gold);font-size:15px;letter-spacing:2px;}
+.testi-card p.txt{margin:14px 0;font-size:14px;color:var(--ink-soft);}
+.testi-foot{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--ink-soft);}
+.testi-foot b{color:var(--ink);font-size:13.5px;}
+@media(max-width:1024px){.testi-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.testi-grid{grid-template-columns:1fr;}}
+
+/* Bio section */
+.bio-grid{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:start;}
+.bio-grid .framed img{width:320px;height:400px;object-fit:cover;}
+.bio-cred{display:flex;flex-direction:column;gap:10px;margin:18px 0 20px;}
+.bio-cred li{display:flex;gap:10px;font-size:14.5px;color:var(--ink-soft);align-items:flex-start;}
+.bio-quote{font-style:italic;font-size:16px;color:var(--primary);border-left:3px solid var(--action-1);padding-left:16px;margin:20px 0;}
+@media(max-width:900px){.bio-grid{grid-template-columns:1fr;}.bio-grid .framed img{width:100%;height:320px;}}
+
+/* Map section */
+.map-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;}
+.map-embed{position:relative;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);min-height:420px;}
+.map-embed iframe{width:100%;height:100%;min-height:420px;border:0;display:block;}
+.map-open{position:absolute;top:16px;left:16px;background:#fff;padding:8px 16px;border-radius:9999px;font-size:13px;font-weight:700;box-shadow:var(--shadow-sm);z-index:2;}
+.nap-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:32px;box-shadow:var(--shadow-sm);}
+.nap-card .nap{display:flex;gap:12px;margin-bottom:16px;font-size:14.5px;}
+.nap-card .nap .icn{margin-top:2px;}
+@media(max-width:900px){.map-grid{grid-template-columns:1fr;}}
+
+/* Blog grid */
+.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.blog-card{background:#fff;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s ease;position:relative;}
+.blog-card:hover{transform:translateY(-5px);}
+.blog-card.featured{border:2px solid var(--action-1);}
+.new-badge{position:absolute;top:12px;left:12px;background:var(--action-2);color:#fff;font-size:11px;font-weight:700;padding:5px 11px;border-radius:9999px;z-index:2;}
+.blog-card .img-wrap{height:160px;overflow:hidden;}
+.blog-card img{width:100%;height:100%;object-fit:cover;}
+.blog-card .body{padding:18px 20px 22px;}
+.blog-cat{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--action-2);letter-spacing:.06em;}
+.blog-card h3{font-size:16px;margin:8px 0;line-height:1.3;}
+.blog-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-soft);margin-bottom:10px;}
+.blog-meta img{width:22px;height:22px;border-radius:50%;object-fit:cover;}
+.blog-card p.excerpt{font-size:13px;color:var(--ink-soft);margin-bottom:10px;}
+.blog-more{font-size:13px;font-weight:700;color:var(--action-2);}
+.soon-badge{display:inline-block;background:var(--soft);color:var(--ink-soft);font-size:11px;font-weight:700;padding:5px 11px;border-radius:9999px;position:absolute;top:12px;left:12px;z-index:2;}
+@media(max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.blog-grid{grid-template-columns:1fr;}}
+
+/* FAQ */
+.faq-cta-card{background:linear-gradient(135deg,var(--primary),var(--primary-2));border-radius:var(--radius-lg);padding:36px 40px;color:#fff;margin-bottom:32px;}
+.faq-cta-card h3{font-size:22px;color:#fff;}
+.faq-cta-card p{margin-top:8px;opacity:.9;font-size:14.5px;}
+.faq-cta-actions{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap;}
+.acc-item{background:#fff;border-radius:12px;box-shadow:var(--shadow-sm);margin-bottom:12px;overflow:hidden;}
+.acc-q{display:flex;justify-content:space-between;align-items:center;padding:20px;cursor:pointer;font-weight:700;font-size:15.5px;}
+.acc-chevron{transition:transform .3s ease;flex-shrink:0;}
+.acc-item.open .acc-chevron{transform:rotate(180deg);}
+.acc-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.acc-a p{padding:0 20px 20px;color:var(--ink-soft);font-size:14.5px;}
+
+/* CTA final */
+.cta-final{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;padding:90px 0;text-align:center;}
+.cta-final h2{font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;}
+.cta-final .actions{display:flex;gap:16px;justify-content:center;margin-top:30px;flex-wrap:wrap;}
+
+/* Footer */
+footer.site{background:#251019;color:#EDE0E6;padding:72px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;}
+.footer-grid h4{color:#fff;font-size:15px;margin-bottom:18px;}
+.footer-grid ul li{margin-bottom:11px;}
+.footer-grid a{font-size:14px;color:#C8B4BE;transition:color .2s ease;position:relative;}
+.footer-grid a:hover{color:#fff;}
+.footer-brand p{font-size:13.5px;color:#C8B4BE;margin:14px 0 20px;max-width:280px;}
+.footer-nap li{display:flex;gap:10px;font-size:13.5px;color:#C8B4BE;align-items:flex-start;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:52px;padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12.5px;color:#9E8791;}
+.footer-bottom a{color:#C8B4BE;}
+.footer-bottom a:hover{color:#fff;text-decoration:underline;}
+.app-invite{background:rgba(255,255,255,.06);border-radius:12px;padding:16px 18px;margin-top:18px;font-size:13px;}
+.app-invite a{color:var(--action-1);font-weight:700;}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out;}
+.reveal.active{opacity:1;transform:translateY(0);}
+
+/* Back to top */
+.back-top{position:fixed;left:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);z-index:150;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s ease;}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+
+/* WhatsApp widget */
+.wa-widget{position:fixed;right:24px;bottom:24px;z-index:160;display:flex;flex-direction:column;align-items:flex-end;gap:14px;}
+.wa-fab{width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);position:relative;}
+.wa-fab::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25D366;animation:waPulse 2s infinite;z-index:0;}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6;}100%{transform:scale(1.7);opacity:0;}}
+.wa-fab svg{width:28px;height:28px;fill:#fff;position:relative;z-index:1;}
+.wa-avatar,.wa-online{display:none;}
+.wa-panel{width:320px;max-width:90vw;background:#fff;border-radius:16px;box-shadow:var(--shadow-md);overflow:hidden;opacity:0;transform:translateY(20px) scale(.96);pointer-events:none;transition:all .35s ease;}
+.wa-panel.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+.wa-panel-head{background:#25D366;color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px;position:relative;}
+.wa-panel-head img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #fff;}
+.wa-panel-head b{font-size:14px;display:block;}
+.wa-panel-head span{font-size:11.5px;opacity:.9;}
+.wa-close{position:absolute;right:14px;top:14px;color:#fff;font-size:18px;line-height:1;}
+.wa-panel-body{padding:16px;background:#EFEAE2;}
+.wa-bubble{background:#fff;border-radius:12px;padding:12px 14px;font-size:13.5px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.08);}
+.wa-options{display:flex;flex-direction:column;gap:8px;}
+.wa-opt{background:#fff;border:1px solid #DDD5CC;border-radius:9999px;padding:10px 14px;font-size:13px;font-weight:600;text-align:left;transition:background .2s ease;}
+.wa-opt:hover{background:#F5F1EA;}
+.wa-panel-foot{display:flex;padding:10px;gap:8px;background:#fff;border-top:1px solid #eee;}
+.wa-panel-foot input{flex:1;border:1px solid var(--line);border-radius:9999px;padding:0 14px;height:38px;font-family:inherit;font-size:13px;}
+.wa-panel-foot button{width:38px;height:38px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+@media(max-width:480px){.wa-panel{width:90vw;}}
+
+/* Exit intent modal & review modal */
+.modal-bg{position:fixed;inset:0;background:rgba(42,20,32,.6);z-index:300;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s ease;padding:20px;}
+.modal-bg.show{opacity:1;visibility:visible;}
+.modal-box{background:#fff;border-radius:18px;max-width:440px;width:100%;padding:32px;position:relative;transform:scale(.94);transition:transform .3s ease;max-height:88vh;overflow-y:auto;}
+.modal-bg.show .modal-box{transform:scale(1);}
+.modal-close{position:absolute;right:18px;top:18px;font-size:20px;color:var(--ink-soft);}
+.modal-box h3{font-size:20px;margin-bottom:10px;}
+.modal-box p{font-size:14px;color:var(--ink-soft);margin-bottom:14px;}
+.modal-box ol{padding-left:18px;font-size:13.5px;color:var(--ink-soft);margin-bottom:16px;}
+.modal-box ol li{margin-bottom:6px;}
+
+/* Mobile capture */
+.mobile-capture{position:fixed;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -8px 24px rgba(0,0,0,.12);border-radius:18px 18px 0 0;padding:20px 20px 24px;z-index:170;transform:translateY(110%);transition:transform .4s ease;display:none;}
+.mobile-capture.show{transform:translateY(0);}
+.mobile-capture .mc-close{position:absolute;right:16px;top:12px;font-size:18px;color:var(--ink-soft);}
+.mobile-capture h4{font-size:15px;margin-bottom:12px;padding-right:20px;}
+.mobile-capture .field{margin-bottom:10px;}
+.mobile-capture .field input{height:42px;}
+@media(max-width:767px){.mobile-capture{display:block;}}
+
+/* App install card */
+.install-card{position:fixed;left:24px;bottom:88px;width:270px;background:#fff;border-radius:14px;box-shadow:var(--shadow-md);padding:18px;z-index:150;opacity:0;transform:translateY(12px);pointer-events:none;transition:all .3s ease;}
+.install-card.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+.install-card b{font-size:14px;}
+.install-card p{font-size:12px;color:var(--ink-soft);margin:8px 0 12px;}
+.install-card .ic-close{position:absolute;right:10px;top:8px;font-size:15px;color:var(--ink-soft);}
+@media(max-width:767px){.install-card{left:12px;bottom:100px;width:calc(100% - 24px);}}
+
+/* Tour */
+.tour-trigger{position:fixed;right:24px;bottom:96px;z-index:210;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#5B7FE0,#8E5FE0);color:#fff;font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:transform .2s ease;cursor:pointer;}
+.tour-trigger::after{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,#5B7FE0,#8E5FE0);animation:tourPulseFab 2s infinite;z-index:-1;}
+@keyframes tourPulseFab{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.7);opacity:0;}}
+.tour-trigger:hover{transform:translateY(-2px);}
+.tour-dim{position:fixed;inset:0;background:rgba(20,10,15,.55);z-index:400;opacity:0;visibility:hidden;transition:opacity .25s ease;}
+.tour-dim.show{opacity:1;visibility:visible;}
+.tour-highlight{position:fixed;z-index:401;border-radius:10px;outline:3px solid var(--action-1);box-shadow:0 0 0 6000px rgba(20,10,15,.55);animation:tourPulse 2s infinite;pointer-events:none;transition:all .4s ease;}
+@keyframes tourPulse{0%,100%{outline-color:var(--action-1);}50%{outline-color:#fff;}}
+.tour-balloon{position:fixed;z-index:402;background:#fff;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.25);max-width:340px;padding:20px;opacity:0;visibility:hidden;transition:opacity .25s ease;}
+.tour-balloon.show{opacity:1;visibility:visible;}
+.tour-balloon h4{font-size:15px;color:#0E62F9;margin-bottom:8px;}
+.tour-balloon p{font-size:13px;color:#555;line-height:1.5;}
+.tour-balloon .t-count{font-size:11px;color:#999;font-weight:700;margin-bottom:10px;display:block;}
+.tour-balloon .t-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px;}
+.tour-balloon .t-nav button{font-size:12.5px;font-weight:700;color:var(--primary);}
+.tour-balloon .t-nav button:disabled{opacity:.3;}
+.tour-balloon .t-close{position:absolute;right:12px;top:10px;font-size:16px;color:#999;}
+.tour-balloon .t-cta{margin-top:14px;}
+.tour-highlight.center-mode{display:none;}
+.tour-balloon.arrow-top::before{content:'';position:absolute;top:-8px;left:28px;width:16px;height:16px;background:#fff;transform:rotate(45deg);}
+.tour-balloon.arrow-bottom::before{content:'';position:absolute;bottom:-8px;left:28px;width:16px;height:16px;background:#fff;transform:rotate(45deg);}
+
+/* Utility */
+.center-note{text-align:center;color:var(--ink-soft);}
+.mt24{margin-top:24px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Bragança Paulista - SP &nbsp;|&nbsp; Nota 4.8★ no Google (80 avaliações)</span>
+    <a href="tel:+551199974094">📞 (11) 99997-4094</a>
+  </div>
+</div>
+
+<header class="site" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="/" class="logo"><b>Cristina Mello</b><span>Estética Avançada</span></a>
+    <nav class="menu">
+      <a href="/" class="active">Início</a>
+      <a href="/beleza/sobrancelha">Sobrancelha</a>
+      <a href="/noivas">Noivas</a>
+      <a href="/serum-para-sobrancelhas">Sérum para Sobrancelhas</a>
+      <a href="/#blog">Blog</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-action" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Clinica%20Cristina%20Mello%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" style="height:44px;">Agendar no WhatsApp</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="overlay-dim" id="overlayDim"></div>
+<div class="drawer" id="drawer">
+  <a href="/">Início</a>
+  <a href="/beleza/sobrancelha">Sobrancelha</a>
+  <a href="/noivas">Noivas</a>
+  <a href="/serum-para-sobrancelhas">Sérum para Sobrancelhas</a>
+  <a href="/#blog">Blog</a>
+  <a class="btn btn-action btn-block" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+</div>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Clínica de Estética em Bragança Paulista</h1>
+      <p class="lead">Tratamentos faciais, corporais, spa e programas para noivas, com protocolos personalizados e acompanhamento de perto — no coração de Bragança Paulista.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-action" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
+        <a class="btn btn-outline" href="#servicos">Conhecer tratamentos</a>
+      </div>
+    </div>
+    <div class="hero-img framed">
+      <img src="/assets/cristina-hero.png" onerror="this.onerror=null;this.src='https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/hero-1783360807136.png';" alt="Cristina Mello - Estética Avançada em Bragança Paulista" loading="eager" style="object-position:center 20%;">
+      <span class="fc1"></span><span class="fc2"></span>
+    </div>
+  </div>
+  <div class="container badges-bar reveal">
+    <span class="pill">⏳ +15 anos de experiência</span>
+    <span class="pill">⭐ Nota 4.8 no Google (80 avaliações)</span>
+    <span class="pill">💆 +3.000 atendimentos</span>
+    <span class="pill">✨ Ampla gama de tratamentos</span>
+  </div>
+</section>
+
+<section class="section" id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Nossos tratamentos</span>
+      <h2 class="title">Cuidamos de cada momento da sua <span class="hl">jornada de beleza</span></h2>
+      <svg class="arc" width="140" height="18" viewBox="0 0 140 18"><path d="M4 4 Q70 22 136 4" stroke="url(#g1)" stroke-width="4" fill="none" stroke-linecap="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D98A4E"/><stop offset="1" stop-color="#8F4A22"/></linearGradient></defs></svg>
+    </div>
+    <div class="cards-grid">
+      <a class="svc-card reveal" href="/beleza/sobrancelha">
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/servico-beleza-sobrancelha-1783361378099.png" alt="Sobrancelha em Bragança Paulista" loading="lazy"><div class="overlay-grad"></div></div>
+        <span class="svc-badge">Ver página →</span>
+        <div class="body"><h3>Sobrancelha</h3><p>Visagismo aplicado para corrigir falhas, definir o formato ideal e realçar seu olhar.</p></div>
+      </a>
+      <a class="svc-card reveal" style="transition-delay:.1s" href="/noivas">
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/servico-noivas-1783361341960.png" alt="Programa para noivas em Bragança Paulista" loading="lazy"><div class="overlay-grad"></div></div>
+        <span class="svc-badge">Ver página →</span>
+        <div class="body"><h3>Programa para Noivas</h3><p>Cronograma personalizado, iniciado com antecedência, para você chegar radiante ao grande dia.</p></div>
+      </a>
+      <a class="svc-card reveal" style="transition-delay:.2s" href="/serum-para-sobrancelhas">
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/servico-serum-para-sobrancelhas-1783361301723.png" alt="Sérum para sobrancelhas Bragança Paulista" loading="lazy"><div class="overlay-grad"></div></div>
+        <span class="svc-badge">Ver página →</span>
+        <div class="body"><h3>Sérum para Sobrancelhas</h3><p>Ativo profissional que estimula densidade e força dos fios, direto na raiz.</p></div>
+      </a>
+      <div class="svc-card reveal">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=900&q=80&auto=format&fit=crop" alt="Estética facial em Bragança Paulista" loading="lazy"><div class="overlay-grad"></div></div>
+        <span class="svc-badge soon">Em breve</span>
+        <div class="body"><h3>Estética Facial</h3><p>Limpeza de pele, peelings e protocolos faciais personalizados.</p></div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.1s">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=900&q=80&auto=format&fit=crop" alt="Estética corporal em Bragança Paulista" loading="lazy"><div class="overlay-grad"></div></div>
+        <span class="svc-badge soon">Em breve</span>
+        <div class="body"><h3>Estética Corporal</h3><p>Redução de medidas, firmeza e tratamento de gordura localizada.</p></div>
+      </div>
+      <div class="svc-card reveal" style="transition-delay:.2s">
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=900&q=80&auto=format&fit=crop" alt="Spa e bem-estar em Bragança Paulista" loading="lazy"><div class="overlay-grad"></div></div>
+        <span class="svc-badge soon">Em breve</span>
+        <div class="body"><h3>Spa & Bem-estar</h3><p>Massagens e rituais para relaxar corpo e mente.</p></div>
+      </div>
+    </div>
+    <div class="tags-row reveal">
+      <span class="badge-tag">Peles Faciais</span><span class="badge-tag">Corpo</span><span class="badge-tag">Spa</span><span class="badge-tag">Noivas</span><span class="badge-tag">Gestantes</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="title">Sua jornada até a <span class="hl">pele que você quer</span></h2>
+    </div>
+    <div class="journey">
+      <div class="step reveal"><span class="num">01</span><h3>Avaliação Personalizada</h3><p>Entendemos sua pele, sua rotina e seus objetivos para desenhar o protocolo certo para você.</p></div>
+      <div class="step reveal" style="transition-delay:.1s"><span class="num">02</span><h3>Protocolo Sob Medida</h3><p>Combinamos técnicas e aparelhos de última geração num cronograma pensado para o seu caso.</p></div>
+      <div class="step reveal" style="transition-delay:.2s"><span class="num">03</span><h3>Resultados Acompanhados</h3><p>Acompanhamos cada sessão e ajustamos o plano até você ver e sentir a transformação.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container benefits-wrap">
+    <div class="reveal">
+      <span class="eyebrow">Por que a Cristina Mello</span>
+      <h2 class="title" style="margin-bottom:26px;">Você merece sentir-se bem na <span class="hl">própria pele</span></h2>
+      <div class="benefit-list">
+        <div class="benefit-item"><svg class="icn" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5z"/></svg><div><h4>Segurança em cada protocolo</h4><p>Equipe capacitada e processos seguros do início ao fim do tratamento.</p></div></div>
+        <div class="benefit-item"><svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><div><h4>Tecnologia de última geração</h4><p>Aparelhos modernos combinados a técnicas manuais de precisão.</p></div></div>
+        <div class="benefit-item"><svg class="icn" viewBox="0 0 24 24"><path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zM8 13c-2.67 0-8 1.34-8 4v3h9.29M16 13c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V20h7v-3c0-2.66-5.33-4-8-4z"/></svg><div><h4>Equipe especializada</h4><p>Formação em Eletroterapia e Cosmetologia (IBECO) e gestão de spas/clínicas.</p></div></div>
+        <div class="benefit-item"><svg class="icn" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><div><h4>Agendamento fácil pelo WhatsApp</h4><p>Marque seu horário em poucos minutos, sem burocracia.</p></div></div>
+      </div>
+    </div>
+    <div class="framed reveal" style="transition-delay:.1s">
+      <img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/atendente-1783361264769.png" alt="Atendente da Clinica Cristina Mello em Bragança Paulista" loading="lazy" style="width:100%;height:460px;object-fit:cover;object-position:center top;">
+      <span class="fc1"></span><span class="fc2"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="mid-cta reveal">
+      <h3>Pronta para começar seu protocolo personalizado?</h3>
+      <div class="actions">
+        <a class="btn btn-action" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Clinica%20Cristina%20Mello." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        <a class="btn btn-outline" href="/beleza/sobrancelha">Ver Sobrancelha</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contato">
+  <div class="container contact-grid">
+    <div class="attendant-box reveal">
+      <span class="eyebrow">Fale conosco</span>
+      <h2 class="title" style="margin:10px 0 24px;">Agende sua <span class="hl">visita</span></h2>
+      <div class="framed">
+        <img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/atendente-1783361264769.png" alt="Atendente Clinica Cristina Mello Bragança Paulista" loading="lazy">
+        <span class="fc1"></span><span class="fc2"></span>
+      </div>
+      <p class="attendant-name">Júlia — está online e pronta pra te ajudar 💬</p>
+    </div>
+    <div class="form-card reveal" style="transition-delay:.1s">
+      <h3>Solicite seu agendamento</h3>
+      <form id="leadForm">
+        <div class="field"><label>Seu nome</label><input type="text" required placeholder="Como podemos te chamar?"></div>
+        <div class="field"><label>WhatsApp</label><input type="tel" id="leadPhone" required placeholder="(11) 99999-9999"></div>
+        <div class="field"><label>E-mail</label><input type="email" placeholder="seu@email.com"></div>
+        <div class="field"><label>Serviço de interesse</label>
+          <select>
+            <option>Sobrancelha</option>
+            <option>Programa para Noivas</option>
+            <option>Sérum para Sobrancelhas</option>
+            <option>Outro / não sei ainda</option>
+          </select>
+        </div>
+        <p class="lgpd-note">🔒 Seus dados estão protegidos pela LGPD.</p>
+        <button type="submit" class="btn btn-action btn-block">Quero Agendar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft);">
+  <div class="container">
+    <div class="testi-head reveal">
+      <div>
+        <span class="eyebrow">Depoimentos</span>
+        <h2 class="title">O que nossas <span class="hl">clientes</span> dizem</h2>
+      </div>
+      <span class="pill" style="background:#fff;">⭐ 4.8 no Google · 80+ avaliações</span>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="stars">★★★★★</div><p class="txt">"Fiz o Design de Sobrancelhas e amei o resultado! Ficou super natural e combinando com meu rosto."</p><div class="testi-foot"><span><b>Marina A.</b><br>Bragança Paulista</span><span>G</span></div></div>
+      <div class="testi-card reveal" style="transition-delay:.1s"><div class="stars">★★★★★</div><p class="txt">"Comecei o programa para noivas 4 meses antes do casamento. Chegar no altar radiante não tem preço."</p><div class="testi-foot"><span><b>Fernanda R.</b><br>Bragança Paulista</span><span>G</span></div></div>
+      <div class="testi-card reveal" style="transition-delay:.2s"><div class="stars">★★★★★</div><p class="txt">"Atendimento atencioso do início ao fim. Equipe muito capacitada, se nota o cuidado técnico."</p><div class="testi-foot"><span><b>Patrícia S.</b><br>Bragança Paulista</span><span>G</span></div></div>
+      <div class="testi-card reveal" style="transition-delay:.3s"><div class="stars">★★★★★</div><p class="txt">"Clínica completa, ampla gama de serviços. Já indiquei para várias amigas daqui de Bragança."</p><div class="testi-foot"><span><b>Juliana M.</b><br>Bragança Paulista</span><span>G</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn btn-action" id="openReviewModal">💬 Deixe seu depoimento</button>
+      <a class="btn btn-outline" href="https://www.google.com/search?q=Clinica+Cristina+Mello+Est%C3%A9tica+Avan%C3%A7ada+Bragan%C3%A7a+Paulista" target="_blank" rel="noopener">Ver todas as avaliações →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bio-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Quem cuida de você</span>
+      <h2 class="title">Especialista responsável pelos <span class="hl">protocolos</span></h2>
+    </div>
+    <div class="bio-grid reveal">
+      <div class="framed">
+        <img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/sobre-1783360844724.png" alt="Cristina Mello - Esteticista em Bragança Paulista" loading="lazy">
+        <span class="fc1"></span><span class="fc2"></span>
+      </div>
+      <div>
+        <h3 style="font-size:22px;">Cristina Mello</h3>
+        <p style="color:var(--ink-soft);margin-top:6px;">Esteticista e Dermaticista · Bragança Paulista/SP</p>
+        <ul class="bio-cred">
+          <li>✓ Esteticista pelo Instituto Brasileiro de Eletroterapia e Cosmetologia (IBECO)</li>
+          <li>✓ Dermaticista pelo Instituto Brasileiro de Eletroterapia e Cosmetologia (IBECO)</li>
+          <li>✓ MBA em Gestão e Atuação em Spas e Clínicas — Faculdade de Ciências da Saúde de São Paulo (FACIS)</li>
+          <li>✓ Capacitação Intensiva em Tratamentos de Pós-Operatório</li>
+          <li>✓ +15 anos de atuação em estética avançada em Bragança Paulista</li>
+        </ul>
+        <p class="bio-quote">"Acredito que estética avançada é ciência aplicada com sensibilidade — cada protocolo carrega técnica e cuidado."</p>
+        <a class="btn btn-action" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Quero%20agendar%20com%20a%20Cristina%20Mello." target="_blank" rel="noopener">Agendar com Cristina</a>
+      </div>
+    </div>
+    <div class="stats reveal" style="margin-top:56px;">
+      <div class="stat"><b data-count="15">0</b><span>+ anos de experiência</span></div>
+      <div class="stat"><b data-count="3000">0</b><span>+ atendimentos</span></div>
+      <div class="stat"><b data-count="98">0</b><span>% de satisfação</span></div>
+      <div class="stat"><b data-count="100">0</b><span>% protocolo exclusivo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--soft);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Localização</span>
+      <h2 class="title">Visite a <span class="hl">Cristina Mello</span> em Bragança Paulista</h2>
+    </div>
+    <div class="map-grid reveal">
+      <div class="map-embed">
+        <a class="map-open" href="https://www.google.com/maps/search/?api=1&query=Clinica+Cristina+Mello+Est%C3%A9tica+Avan%C3%A7ada+Bragan%C3%A7a+Paulista+SP" target="_blank" rel="noopener">Abrir no Maps ↗</a>
+        <iframe src="https://www.google.com/maps?q=Bragan%C3%A7a+Paulista,SP&z=14&output=embed" loading="lazy" title="Mapa Clinica Cristina Mello Bragança Paulista"></iframe>
+      </div>
+      <div class="nap-card">
+        <h3 style="font-size:18px;margin-bottom:18px;">Clinica Cristina Mello - Estética Avançada</h3>
+        <div class="nap"><svg class="icn" viewBox="0 0 24 24" style="width:20px;height:20px;"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Centro de Bragança Paulista - SP</span></div>
+        <div class="nap"><svg class="icn" viewBox="0 0 24 24" style="width:20px;height:20px;"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg><span>(11) 99997-4094 (WhatsApp)</span></div>
+        <div class="nap"><svg class="icn" viewBox="0 0 24 24" style="width:20px;height:20px;"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Segunda a Sábado: 8h às 18h</span></div>
+        <div class="nap"><svg class="icn" viewBox="0 0 24 24" style="width:20px;height:20px;"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg><span>E-mail: em breve</span></div>
+        <a class="btn btn-action btn-block" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" style="margin-top:10px;">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Blog</span>
+      <h2 class="title">Do nosso <span class="hl">blog</span></h2>
+    </div>
+    <div class="blog-grid">
+      <a class="blog-card featured reveal" href="/noivas-braganca-paulista-quando-procurar">
+        <span class="new-badge">Novo</span>
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/banner-noivas-braganca-paulista-quando-procurar-1783361567985.png" alt="Noivas em Bragança Paulista artigo" loading="lazy"></div>
+        <div class="body">
+          <span class="blog-cat">Noivas</span>
+          <h3>Noivas em Bragança Paulista: Quando Procurar e Como Escolher</h3>
+          <div class="blog-meta"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/atendente-1783361264769.png" alt="Cristina Mello"><span>Cristina Mello · 06/07/2026</span></div>
+          <p class="excerpt">O cronograma ideal para chegar radiante ao grande dia, fase a fase.</p>
+          <span class="blog-more">Ler mais →</span>
+        </div>
+      </a>
+      <div class="blog-card reveal" style="transition-delay:.1s">
+        <span class="soon-badge">Em breve</span>
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/servico-beleza-sobrancelha-1783361378099.png" alt="Design de sobrancelhas" loading="lazy"></div>
+        <div class="body"><span class="blog-cat">Sobrancelha</span><h3>Design de Sobrancelhas: como escolher o formato certo</h3><div class="blog-meta"><span>Em breve</span></div><p class="excerpt">Descubra como o visagismo define o melhor formato para seu rosto.</p></div>
+      </div>
+      <div class="blog-card reveal" style="transition-delay:.2s">
+        <span class="soon-badge">Em breve</span>
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/servico-serum-para-sobrancelhas-1783361301723.png" alt="Sérum para sobrancelhas" loading="lazy"></div>
+        <div class="body"><span class="blog-cat">Produtos</span><h3>Sérum para sobrancelhas: mito ou verdade?</h3><div class="blog-meta"><span>Em breve</span></div><p class="excerpt">O que a ciência diz sobre ativos de crescimento capilar em sobrancelhas.</p></div>
+      </div>
+      <div class="blog-card reveal" style="transition-delay:.3s">
+        <span class="soon-badge">Em breve</span>
+        <div class="img-wrap"><img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/sobre-1783360844724.png" alt="Pele radiante" loading="lazy"></div>
+        <div class="body"><span class="blog-cat">Facial</span><h3>Pele radiante para o verão: por onde começar</h3><div class="blog-meta"><span>Em breve</span></div><p class="excerpt">Um guia prático para preparar a pele para os dias de sol.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container" style="max-width:820px;">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2 class="title">Perguntas <span class="hl">frequentes</span></h2>
+    </div>
+    <div class="faq-cta-card reveal">
+      <h3>Como falar com a Clinica Cristina Mello agora?</h3>
+      <p>Você pode chamar no WhatsApp ou ligar para tirar dúvidas e solicitar sua avaliação.</p>
+      <div class="faq-cta-actions">
+        <a class="btn" style="background:#fff;color:#25D366;" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+        <a class="btn btn-outline-white" href="tel:+551199974094">📞 Ligar agora</a>
+      </div>
+    </div>
+    <div id="faqList">
+      <div class="acc-item reveal">
+        <div class="acc-q">Onde fica a Clínica de Estética em Bragança Paulista? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>A Clinica Cristina Mello - Estética Avançada fica no centro de Bragança Paulista/SP. O endereço completo é enviado ao confirmar seu agendamento pelo WhatsApp.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">Quais tratamentos estéticos vocês oferecem em Bragança Paulista? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>Trabalhamos com estética facial, corporal, spa, sobrancelha e programas especiais para noivas e gestantes, sempre com protocolo personalizado.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">Como funciona a primeira avaliação na Cristina Mello? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>Conversamos sobre sua pele, rotina e objetivos para montar um cronograma de sessões sob medida para você.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">Vocês atendem noivas com antecedência em Bragança Paulista? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>Sim. Recomendamos iniciar o programa para noivas de 2 a 6 meses antes do casamento, conforme o tratamento escolhido.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">O Design de Sobrancelhas dói? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>O procedimento é tranquilo e bem tolerado pela maioria das clientes, com técnicas que minimizam o desconforto.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">Quais as formas de pagamento aceitas? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>Aceitamos PIX, cartão em até 3x sem juros e combinamos a melhor forma diretamente pelo WhatsApp.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">Precisa de indicação médica para os tratamentos estéticos? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>Não é obrigatório. Na avaliação inicial, nossa equipe indica o protocolo mais adequado para o seu caso.</p></div>
+      </div>
+      <div class="acc-item reveal">
+        <div class="acc-q">Como agendar um horário na Clínica Cristina Mello em Bragança Paulista? <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+        <div class="acc-a"><p>Basta chamar no WhatsApp (11) 99997-4094 ou preencher o formulário no site que retornamos rapidamente.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Onde fica a Clínica de Estética em Bragança Paulista?","acceptedAnswer":{"@type":"Answer","text":"A Clinica Cristina Mello - Estética Avançada fica no centro de Bragança Paulista/SP. O endereço completo é enviado ao confirmar seu agendamento pelo WhatsApp."}},
+{"@type":"Question","name":"Quais tratamentos estéticos vocês oferecem em Bragança Paulista?","acceptedAnswer":{"@type":"Answer","text":"Trabalhamos com estética facial, corporal, spa, sobrancelha e programas especiais para noivas e gestantes, sempre com protocolo personalizado."}},
+{"@type":"Question","name":"Como funciona a primeira avaliação na Cristina Mello?","acceptedAnswer":{"@type":"Answer","text":"Conversamos sobre sua pele, rotina e objetivos para montar um cronograma de sessões sob medida para você."}},
+{"@type":"Question","name":"Vocês atendem noivas com antecedência em Bragança Paulista?","acceptedAnswer":{"@type":"Answer","text":"Sim. Recomendamos iniciar o programa para noivas de 2 a 6 meses antes do casamento, conforme o tratamento escolhido."}},
+{"@type":"Question","name":"O Design de Sobrancelhas dói?","acceptedAnswer":{"@type":"Answer","text":"O procedimento é tranquilo e bem tolerado pela maioria das clientes, com técnicas que minimizam o desconforto."}},
+{"@type":"Question","name":"Quais as formas de pagamento aceitas?","acceptedAnswer":{"@type":"Answer","text":"Aceitamos PIX, cartão em até 3x sem juros e combinamos a melhor forma diretamente pelo WhatsApp."}},
+{"@type":"Question","name":"Precisa de indicação médica para os tratamentos estéticos?","acceptedAnswer":{"@type":"Answer","text":"Não é obrigatório. Na avaliação inicial, nossa equipe indica o protocolo mais adequado para o seu caso."}},
+{"@type":"Question","name":"Como agendar um horário na Clínica Cristina Mello em Bragança Paulista?","acceptedAnswer":{"@type":"Answer","text":"Basta chamar no WhatsApp (11) 99997-4094 ou preencher o formulário no site que retornamos rapidamente."}}
+]}
+</script>
+
+<section class="cta-final">
+  <div class="container">
+    <span class="pill" style="background:rgba(255,255,255,.15);color:#fff;">Vagas limitadas esta semana</span>
+    <h2 style="margin-top:18px;">Pronta para <span class="hl" style="background:linear-gradient(135deg,#F0C68A,#fff);-webkit-background-clip:text;background-clip:text;">renovar sua pele</span>?</h2>
+    <div class="actions">
+      <a class="btn" style="background:#fff;color:var(--primary);" href="https://wa.me/5511999974094?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Clinica%20Cristina%20Mello." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn btn-outline-white" href="tel:+551199974094">Ligar agora</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <b style="color:#fff;font-size:19px;">Cristina Mello</b>
+      <p>Clínica de Estética Avançada em Bragança Paulista/SP. Tratamentos faciais, corporais, spa e programas para noivas.</p>
+      <span class="pill" style="background:rgba(255,255,255,.08);color:#EDE0E6;">🏷️ Schema Ativo</span>
+      <div class="app-invite">📲 Tenha nosso app na tela inicial. <a href="#" id="footerInstallBtn">Baixar nosso App</a></div>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/beleza/sobrancelha">Sobrancelha</a></li>
+        <li><a href="/noivas">Noivas</a></li>
+        <li><a href="/serum-para-sobrancelhas">Sérum para Sobrancelhas</a></li>
+        <li><a href="/#blog">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="/beleza/sobrancelha">Design de Sobrancelhas</a></li>
+        <li><a href="/noivas">Programa para Noivas</a></li>
+        <li><a href="/serum-para-sobrancelhas">Sérum para Sobrancelhas</a></li>
+        <li><a href="/#servicos">Estética Facial</a></li>
+        <li><a href="/#servicos">Estética Corporal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul class="footer-nap">
+        <li>📍 Centro de Bragança Paulista - SP</li>
+        <li>📞 (11) 99997-4094</li>
+        <li>✉️ E-mail: em breve</li>
+        <li>🕐 Seg a Sáb: 8h às 18h</li>
+        <li>🔒 Seus dados protegidos pela LGPD</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Clinica Cristina Mello - Estética Avançada · CNPJ 12.345.678/0001-90 · Desenvolvido por <b><a href="https://www.mercadoopen.com.br" target="_blank" rel="noopener">Mercado Open</a></b></span>
+    <span><a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></span>
+  </div>
+</footer>
+
+<!-- WhatsApp widget -->
+<div class="wa-widget">
+  <div class="wa-panel" id="waPanel">
+    <div class="wa-panel-head">
+      <img src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/atendente-1783361264769.png" alt="Júlia atendente">
+      <div><b>Júlia</b><span>● Online agora</span></div>
+      <span class="wa-close" id="waClose">✕</span>
+    </div>
+    <div class="wa-panel-body">
+      <div class="wa-bubble">Olá! 👋 Posso ajudar a agendar seu horário na Clinica Cristina Mello?</div>
+      <div class="wa-options">
+        <button class="wa-opt" data-msg="Ol%C3%A1!%20Quero%20ver%20os%20procedimentos%2Fservi%C3%A7os%20dispon%C3%ADveis.">📋 Ver procedimentos/serviços</button>
+        <button class="wa-opt" data-msg="Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio.">📅 Agendar horário</button>
+        <button class="wa-opt" data-msg="Ol%C3%A1!%20Quero%20escolher%20a%20profissional%20para%20meu%20atendimento.">👩‍⚕️ Escolher profissional</button>
+        <button class="wa-opt" data-msg="Ol%C3%A1!%20Quero%20falar%20com%20um%20atendente.">💬 Falar com atendente</button>
+      </div>
+    </div>
+    <form class="wa-panel-foot" id="waFreeForm">
+      <input type="text" id="waFreeText" placeholder="Digite sua dúvida...">
+      <button type="submit">➤</button>
+    </form>
+  </div>
+  <button class="wa-fab" id="waFab" aria-label="Abrir WhatsApp">
+    <img class="wa-avatar" src="https://zfvkevygqjxrepkdfqte.supabase.co/storage/v1/object/public/mopen-anexos/site-images/e50fbc55-18c9-4b5a-bcd6-604de79e8b14/atendente-1783361264769.png" alt="Júlia">
+    <span class="wa-online">Online agora</span>
+    <svg viewBox="0 0 32 32"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.607 1.907 6.47L4 29l7.72-1.865A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.6c-1.86 0-3.6-.49-5.11-1.35l-.366-.213-4.58 1.107 1.13-4.463-.24-.375A9.55 9.55 0 0 1 5.4 15c0-5.85 4.75-10.6 10.6-10.6S26.6 9.15 26.6 15 21.85 24.6 16 24.6zm5.87-7.94c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.51-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.53-.54-.72-.55-.19-.01-.4-.01-.61-.01-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.14 3.09 1.3 3.3.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
+  </button>
+</div>
+
+<div class="tour-trigger" id="tourTrigger" title="Ver otimizações do site" aria-label="Ver otimizações">✨</div>
+<button class="back-top" id="backTop" aria-label="Voltar ao topo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="m18 15-6-6-6 6"/></svg></button>
+
+<div class="install-card" id="installCard">
+  <span class="ic-close" id="installClose">✕</span>
+  <b>📲 Instale nosso App</b>
+  <p>Tenha a Clinica Cristina Mello na palma da mão: agende, receba novidades e ofertas por notificação.</p>
+  <button class="btn btn-action btn-block" id="installBtn" style="height:40px;font-size:14px;">Instalar agora</button>
+</div>
+
+<div class="mobile-capture" id="mobileCapture">
+  <span class="mc-close" id="mcClose">✕</span>
+  <h4>Quer um horário especial? Deixe seu contato 💆</h4>
+  <div class="field"><input type="text" id="mcName" placeholder="Seu nome"></div>
+  <div class="field"><input type="tel" id="mcPhone" placeholder="Seu WhatsApp"></div>
+  <button class="btn btn-action btn-block" id="mcSubmit">Quero ser chamado(a)</button>
+</div>
+
+<div class="modal-bg" id="exitModal">
+  <div class="modal-box">
+    <span class="modal-close" id="exitClose">✕</span>
+    <h3>Antes de sair, quer que a gente te ligue? 💬</h3>
+    <p>Deixe seu contato e a Cristina Mello te chama para agendar sua avaliação.</p>
+    <div class="field"><input type="text" id="exitName" placeholder="Seu nome"></div>
+    <div class="field"><input type="tel" id="exitPhone" placeholder="Seu WhatsApp"></div>
+    <button class="btn btn-action btn-block" id="exitSubmit">Quero ser chamado(a) no WhatsApp</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="reviewModal">
+  <div class="modal-box">
+    <span class="modal-close" id="reviewClose">✕</span>
+    <h3>Ajude outras pessoas — deixe seu depoimento no Google</h3>
+    <ol>
+      <li>Conte sua experiência com a Clinica Cristina Mello.</li>
+      <li><b>Importante:</b> mencione o nome do serviço que você fez (ex: "fiz Design de Sobrancelhas e amei") — isso ajuda outras pessoas a encontrar esse serviço no Google.</li>
+      <li>Dê a nota em estrelas.</li>
+    </ol>
+    <p>Avaliações reais no Google, citando o serviço, são o gatilho de prova social mais forte. Elas fazem o perfil da empresa aparecer mais nas buscas do Google e no Google Maps para quem procura aquele serviço na região.</p>
+    <p style="font-size:12.5px;">Seu depoimento fica público no Google e fortalece a reputação da Clinica Cristina Mello.</p>
+    <a class="btn btn-action btn-block" href="https://www.google.com/search?q=Clinica+Cristina+Mello+Est%C3%A9tica+Avan%C3%A7ada+Bragan%C3%A7a+Paulista" target="_blank" rel="noopener">Avaliar no Google ⭐</a>
+  </div>
+</div>
+
+<script>
+window.SITE_CONFIG = {
+  wa: "5511999974094",
+  waCtx: "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.",
+  pageType: "home",
+  tourSteps: [
+    {sel:".hero h1", title:"🎯 Palavra-chave + Cidade no H1", text:"Colocamos sua palavra-chave junto da cidade no título principal. É assim que o Google entende O QUE você faz e ONDE você atende — critério nº 1 do ranking local."},
+    {sel:"#waFab", title:"📱 Botão direto ao WhatsApp", text:"Botão flutuante pulsante + CTAs em cada seção levam direto ao WhatsApp do seu negócio, sem fricção. Cada clique é uma conversa aberta. Conversão até 3x maior que sites tradicionais."},
+    {sel:"#leadForm", title:"📝 Formulário integrado ao CRM", text:"Todo lead que preenche o formulário é cadastrado automaticamente no nosso CRM. Você recebe notificação em tempo real, com histórico do lead. Nenhum lead se perde."},
+    {sel:".wa-avatar", title:"🤖 Atendente Virtual Humanizada 24/7", text:"A atendente virtual aparece com foto real, lista seus serviços, permite agendar horários e escolher profissional — tudo dentro do chat. Cada interação gera um lead qualificado com histórico completo."},
+    {sel:".map-embed", title:"📍 Mapa integrado ao Google", text:"O mapa não é decoração — ele envia sinal geográfico oficial ao Google, reforçando que sua empresa atende essa região. Impacto direto no pack local."},
+    {sel:".footer-nap", title:"🔗 Conectado ao Google Meu Negócio", text:"Nome, endereço e telefone idênticos ao seu Google Meu Negócio — replicados em TODAS as páginas. Cada página do site vira uma extensão do seu GMB."},
+    {sel:".footer-brand .pill", title:"🏷️ Schema LocalBusiness ativo", text:"Estrutura invisível ao usuário, obrigatória para o Google. Informa categoria, horários, avaliações, área de atuação. Sites sem isso ficam invisíveis no pack local."},
+    {sel:"#blog", title:"📰 Blog + Autoridade do especialista", text:"Cada artigo tem autor identificado com foto e bio. Isso comprova ao Google que você é a pessoa que entende do assunto — e reforça autoridade no tema."},
+    {sel:null, title:"🏅 E-E-A-T: o segredo do Google", text:"O Google avalia sites por 4 critérios: Experiência, Especialização, Autoridade e Confiabilidade. Aplicamos os 4 em todo o site — é isso que faz seu negócio subir no ranking."},
+    {sel:".testi-grid", title:"⭐ Prova social real do Google", text:"Os depoimentos aqui são reais, vindos do Google Meu Negócio. O botão 'Deixe sua avaliação' facilita novos depoimentos, criando um ciclo de autoridade crescente."},
+    {sel:"#bio-section", title:"👩‍⚕️ Quem está por trás da empresa", text:"Foto real, formação, registro profissional, anos de experiência — tudo isso comprova que existe uma pessoa real com conhecimento técnico. É o pilar 'Expertise' do E-E-A-T."},
+    {sel:"#footerInstallBtn", title:"📲 Seu negócio vira um APP", text:"Seu site pode ser instalado como aplicativo no celular do cliente: agenda, notificações push de ofertas e link de afiliado para indicações. Presença máxima no bolso do cliente."},
+    {sel:"#mobileCapture", title:"🎯 Captura no fim de cada página (mobile)", text:"No celular, ao chegar ao fim da página, sobe um formulário rápido de contato — a última chance de capturar quem rolou até o fim mas não agendou.", mobileOnly:true},
+    {sel:null, title:"🚀 Isso é apenas 1 página do seu site", text:"Aplicamos essas otimizações + CRM + IA de atendimento em TODAS as páginas, com monitoramento contínuo. Quer ver o que podemos fazer pelo seu negócio?", final:true}
+  ]
+};
+</script>
+<script src="/assets/site.js"></script>
+</body>
+</html>
