@@ -1,4 +1,4 @@
-const CACHE = 'ccm-shell-v1';
+const CACHE = 'rj-shell-v1';
 const SHELL = ['/', '/manifest.json', '/icons/icon.svg'];
 
 self.addEventListener('install', (e) => {

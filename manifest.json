@@ -1,11 +1,11 @@
 {
-  "name": "Clinica Cristina Mello - Estética Avançada",
-  "short_name": "Cristina Mello",
-  "description": "Estética facial, corporal e spa em Bragança Paulista/SP. Agende sua avaliação.",
+  "name": "Rodrigo Junqueira Imóveis — Temporada em São Paulo",
+  "short_name": "Rodrigo Junqueira",
+  "description": "Aluguel de temporada e gestão de imóveis em São Paulo. Agende sua estadia ou solicite uma cotação.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FBF8F6",
-  "theme_color": "#3A1830",
+  "background_color": "#FAFAFA",
+  "theme_color": "#0E1F3A",
   "orientation": "portrait-primary",
   "icons": [
     { "src": "/icons/icon.svg", "sizes": "192x192", "type": "image/svg+xml" },
