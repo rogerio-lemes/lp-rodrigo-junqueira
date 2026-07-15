@@ -108,7 +108,8 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(200,155,95,.15);color:#7C5A2A;border-radius:9999px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
 .hero-eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--secundaria);box-shadow:0 0 0 4px rgba(200,155,95,.25)}
-.hero h1{font-size:clamp(1.75rem,4.6vw,3.4rem);font-weight:800;line-height:1.08;margin-bottom:18px;word-wrap:break-word;overflow-wrap:break-word;hyphens:auto}
+.hero h1{font-size:clamp(1.75rem,4.6vw,3.4rem);font-weight:800;line-height:1.1;margin-bottom:18px;word-wrap:normal;overflow-wrap:normal;hyphens:none;-webkit-hyphens:none}
+.hero h1 .nobr{white-space:nowrap}
 .hero h1 .highlight{color:var(--secundaria)}
 .hero p.lead{font-size:1.1rem;color:var(--texto-suave);margin-bottom:28px;max-width:560px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
@@ -125,7 +126,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
   .hero .container{grid-template-columns:1fr;gap:28px}
   .hero-image{aspect-ratio:3/4;max-height:none;order:2}
   .hero > .container > div:first-child{order:1}
-  .hero h1{font-size:clamp(1.6rem,7vw,2.4rem);line-height:1.15}
+  .hero h1{font-size:clamp(1.35rem,5.5vw,2rem);line-height:1.18;letter-spacing:-.01em}
   .hero p.lead{font-size:1rem}
   .hero-cta{width:100%}
   .hero-cta .btn{flex:1 1 100%;justify-content:center;text-align:center;padding:14px 18px;font-size:.95rem}
@@ -138,7 +139,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 @media (max-width:480px){
   .topbar-info span:first-child{display:none}
   .container{padding-left:16px;padding-right:16px}
-  .hero h1{font-size:clamp(1.5rem,7.5vw,2rem)}
+  .hero h1{font-size:clamp(1.25rem,5.8vw,1.7rem);line-height:1.2}
   .hero-eyebrow{font-size:11px;padding:7px 12px;margin-bottom:16px}
   .hero-image{aspect-ratio:4/5;border-radius:18px}
   .hero-image-badge img{width:34px;height:34px}
@@ -573,7 +574,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
   <div class="container">
     <div>
       <span class="hero-eyebrow">Para proprietários · São Paulo</span>
-      <h1 data-tour="h1">Administração de Imóvel <span class="highlight">por Temporada</span> em São Paulo</h1>
+      <h1 data-tour="h1"><span class="nobr">Administração de Imóvel</span> <span class="highlight">por Temporada</span> em São Paulo</h1>
       <p class="lead"><b>Mais lucro, menos dor de cabeça.</b> Gestão profissional do seu imóvel de ponta a ponta — anúncios, hóspedes, precificação, limpeza e faturamento. Você recebe o repasse; a gente faz o resto.</p>
       <div class="hero-cta">
         <a class="btn btn-cta btn-lg" href="https://wa.me/5511982396610?text=Ol%C3%A1!%20Quero%20uma%20proje%C3%A7%C3%A3o%20de%20faturamento%20para%20administra%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel%20em%20SP." target="_blank" rel="noopener">
