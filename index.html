@@ -173,6 +173,11 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 .tst-card .g-badge{position:absolute;top:20px;right:20px;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#EA4335 50%,#FBBC05 75%,#34A853);display:grid;place-items:center;color:#FFF;font-weight:800;font-size:11px}
 .tst-cta{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
 .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.form-col{position:relative}
+.form-watermark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(1.35);width:120%;pointer-events:none;z-index:0;opacity:.06;color:var(--primaria)}
+.form-watermark svg{width:100%;height:auto;display:block}
+.form-col .form-card{position:relative;z-index:1}
+@media (max-width:900px){.form-watermark{transform:translate(-50%,-50%) scale(1.1);opacity:.05}}
 .contact-photo{position:relative;aspect-ratio:4/5;background:transparent;padding-bottom:80px;overflow:visible}
 .contact-photo::before{content:"";position:absolute;inset:6% 8% 22% 8%;border-radius:24px;background:radial-gradient(ellipse at 50% 30%,rgba(200,155,95,.18),rgba(14,31,58,.05) 60%,transparent 90%);z-index:0}
 .contact-photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 20px 30px rgba(14,31,58,.18))}
@@ -847,16 +852,17 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
           <img src="/assets/rodrigo-contato-final.png" alt="Rodrigo Junqueira — Gestão de Imóveis e Hospitalidade" loading="lazy">
           <div class="caption">
             <div class="name"><span class="dot"></span> Rodrigo</div>
-            <p>online agora — resposta em minutos no WhatsApp 💬</p>
+            <p>online agora, resposta em minutos no WhatsApp 💬</p>
           </div>
         </div>
       </div>
+      <div class="form-col">
+      <div class="form-watermark" aria-hidden="true"><svg viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C23,17 10,17 10,30 C10,43 23,43 30,30 C37,17 50,17 50,30 C50,43 37,43 30,30" stroke="currentColor" stroke-width="2.2" fill="none"/><path d="M30,30 C23,17 10,17 10,30 C10,43 23,43 30,30 C37,17 50,17 50,30 C50,43 37,43 30,30" stroke="currentColor" stroke-width="4.5" fill="none" opacity=".08"/><line x1="72" y1="10" x2="72" y2="50" stroke="currentColor" stroke-width="1" opacity=".3"/><text x="84" y="28" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="currentColor">RODRIGO</text><text x="84" y="44" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="currentColor">JUNQUEIRA</text><text x="84" y="56" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="7.5" font-weight="400" letter-spacing="2.5" fill="currentColor" opacity=".5">GESTÃO DE IMÓVEIS E HOSPITALIDADE</text></svg></div>
       <form class="form-card" id="leadForm" onsubmit="return handleLead(event, 'home')">
         <h3>Cadastre seu imóvel</h3>
-        <p class="sub">Preencha os dados — retornamos em até 24h com projeção realista de faturamento para o seu imóvel em São Paulo.</p>
-        <div class="field"><label>Seu nome</label><input required name="nome" placeholder="Como podemos te chamar?"></div>
-        <div class="field"><label>WhatsApp</label><input required name="tel" placeholder="(11) 99999-9999" inputmode="tel"></div>
-        <div class="field"><label>E-mail</label><input required type="email" name="email" placeholder="voce@email.com"></div>
+        <p class="sub">Preencha os dados e retornamos em até 24h com projeção realista de faturamento para o seu imóvel em São Paulo.</p>
+        <div class="field"><label>Seu nome *</label><input required name="nome" placeholder="Como podemos te chamar?"></div>
+        <div class="field"><label>WhatsApp *</label><input required name="tel" placeholder="(11) 99999-9999" inputmode="tel"></div>
         <div class="field"><label>Endereço / bairro do imóvel</label><input name="endereco" placeholder="Ex.: Higienópolis, São Paulo"></div>
         <div class="field"><label>Tipo do imóvel</label>
           <select name="tipo">
@@ -865,13 +871,14 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
             <option>2 quartos</option>
             <option>3+ quartos</option>
             <option>Cobertura / Duplex</option>
-            <option>Sou hóspede — quero reservar</option>
+            <option>Sou hóspede, quero reservar</option>
           </select>
         </div>
         <div class="field"><label>Mensagem (opcional)</label><textarea name="msg" placeholder="Situação atual do imóvel, dúvidas..."></textarea></div>
         <button class="btn btn-cta btn-block btn-lg" type="submit">Quero minha projeção</button>
         <p class="lgpd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Seus dados estão protegidos pela LGPD.</p>
       </form>
+      </div>
     </div>
   </div>
 </section>
