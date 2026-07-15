@@ -411,16 +411,21 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 .platform-strip .h-kicker{margin-bottom:6px}
 .platform-strip h3{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:800;margin-bottom:20px}
 .platform-strip h3 .highlight{color:var(--secundaria)}
-.platforms{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px}
-.platform{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;background:var(--muted);border-radius:14px;font-weight:700;font-size:14px;color:var(--texto);border:1.5px solid transparent;transition:border-color .25s,background .25s}
-.platform:hover{border-color:var(--secundaria);background:#FFF}
-.platform-icon{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;color:#FFF;font-weight:800;font-size:11px}
+.platforms{position:relative;overflow:hidden;padding:8px 0;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 8%,#000 92%,transparent 100%)}
+.platforms-track{display:flex;gap:14px;width:max-content;animation:platformScroll 24s linear infinite;will-change:transform}
+.platforms:hover .platforms-track{animation-play-state:paused}
+@keyframes platformScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.platform{flex-shrink:0;display:inline-flex;align-items:center;gap:10px;padding:12px 22px;background:var(--muted);border-radius:14px;font-weight:700;font-size:14px;color:var(--texto);border:1.5px solid transparent;transition:transform .25s cubic-bezier(.22,.61,.36,1),border-color .25s,background .25s,box-shadow .25s;cursor:pointer}
+.platform:hover{border-color:var(--secundaria);background:#FFF;transform:translateY(-4px) scale(1.06);box-shadow:0 12px 24px rgba(14,31,58,.12)}
+.platform-icon{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;color:#FFF;font-weight:800;font-size:11px;transition:transform .25s}
+.platform:hover .platform-icon{transform:rotate(-6deg) scale(1.15)}
 .platform.p-airbnb .platform-icon{background:#FF385C}
 .platform.p-booking .platform-icon{background:#003580}
 .platform.p-decolar .platform-icon{background:#DA00A5}
 .platform.p-expedia .platform-icon{background:#FFC72C;color:#003580}
 .platform.p-vrbo .platform-icon{background:#245ABC}
 .platform.p-stays .platform-icon{background:#0E1F3A}
+@media (prefers-reduced-motion:reduce){.platforms-track{animation:none}}
 .dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media (max-width:900px){.dif-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.dif-grid{grid-template-columns:1fr}}
@@ -618,15 +623,23 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
     <div class="platform-strip">
       <span class="h-kicker">Onde seu imóvel será anunciado</span>
       <h3>Presença nas <span class="highlight">4 maiores plataformas</span> de hospedagem do mundo</h3>
-      <div class="platforms">
-        <span class="platform p-airbnb"><span class="platform-icon">A</span> Airbnb</span>
-        <span class="platform p-booking"><span class="platform-icon">B</span> Booking.com</span>
-        <span class="platform p-decolar"><span class="platform-icon">D</span> Decolar</span>
-        <span class="platform p-expedia"><span class="platform-icon">E</span> Expedia</span>
-        <span class="platform p-vrbo"><span class="platform-icon">V</span> Vrbo</span>
-        <span class="platform p-stays"><span class="platform-icon">S</span> Site próprio</span>
+      <div class="platforms" aria-label="Plataformas onde seu imóvel será anunciado">
+        <div class="platforms-track">
+          <span class="platform p-airbnb"><span class="platform-icon">A</span> Airbnb</span>
+          <span class="platform p-booking"><span class="platform-icon">B</span> Booking.com</span>
+          <span class="platform p-decolar"><span class="platform-icon">D</span> Decolar</span>
+          <span class="platform p-expedia"><span class="platform-icon">E</span> Expedia</span>
+          <span class="platform p-vrbo"><span class="platform-icon">V</span> Vrbo</span>
+          <span class="platform p-stays"><span class="platform-icon">S</span> Site próprio</span>
+          <span class="platform p-airbnb" aria-hidden="true"><span class="platform-icon">A</span> Airbnb</span>
+          <span class="platform p-booking" aria-hidden="true"><span class="platform-icon">B</span> Booking.com</span>
+          <span class="platform p-decolar" aria-hidden="true"><span class="platform-icon">D</span> Decolar</span>
+          <span class="platform p-expedia" aria-hidden="true"><span class="platform-icon">E</span> Expedia</span>
+          <span class="platform p-vrbo" aria-hidden="true"><span class="platform-icon">V</span> Vrbo</span>
+          <span class="platform p-stays" aria-hidden="true"><span class="platform-icon">S</span> Site próprio</span>
+        </div>
       </div>
-      <p style="color:var(--texto-suave);font-size:.9rem;margin-top:16px">Calendário unificado — zero risco de dupla reserva. Todas as taxas de plataforma já entram no relatório mensal.</p>
+      <p style="color:var(--texto-suave);font-size:.9rem;margin-top:16px">Calendário unificado, zero risco de dupla reserva. Todas as taxas de plataforma já entram no relatório mensal.</p>
     </div>
   </div>
 </section>
