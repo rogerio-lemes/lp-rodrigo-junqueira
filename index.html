@@ -112,7 +112,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 .hero h1 .highlight{color:var(--secundaria)}
 .hero p.lead{font-size:1.1rem;color:var(--texto-suave);margin-bottom:28px;max-width:560px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero-image{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.hero-image{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden}
 .hero-image img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero-image::after{content:"";position:absolute;inset:auto 0 0 0;height:35%;background:linear-gradient(to top,rgba(14,31,58,.55),transparent);pointer-events:none}
 .hero-image-badge{position:absolute;left:20px;bottom:20px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);padding:14px 18px;border-radius:14px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);z-index:2}
@@ -376,16 +376,16 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 /* Pilares (3 blocos grandes) */
 .pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media (max-width:900px){.pilares{grid-template-columns:1fr}}
-.pilar{background:#FFF;border:1px solid var(--borda);border-radius:20px;position:relative;overflow:hidden;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
-.pilar:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.pilar{background:#FFF;border:1px solid var(--borda);border-radius:20px;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(14,31,58,.08);transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
+.pilar:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(14,31,58,.14);border-color:var(--secundaria)}
 .pilar .pilar-img{aspect-ratio:16/10;overflow:hidden;position:relative}
-.pilar .pilar-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-.pilar:hover .pilar-img img{transform:scale(1.05)}
-.pilar .pilar-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,31,58,.4),transparent 50%)}
-.pilar .pilar-body{padding:28px 26px;flex:1}
-.pilar .num{font-size:.85rem;font-weight:800;color:var(--secundaria);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
-.pilar h3{font-size:1.25rem;font-weight:800;margin-bottom:10px;line-height:1.2}
-.pilar p{color:var(--texto-suave);font-size:.95rem;line-height:1.6}
+.pilar .pilar-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.pilar:hover .pilar-img img{transform:scale(1.08)}
+.pilar .pilar-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,31,58,.35),transparent 60%)}
+.pilar .pilar-body{padding:30px 28px;flex:1}
+.pilar .num{font-size:.8rem;font-weight:800;color:var(--secundaria);letter-spacing:.25em;text-transform:uppercase;margin-bottom:12px;display:inline-block;padding:4px 12px;background:rgba(200,155,95,.08);border-radius:6px}
+.pilar h3{font-size:1.35rem;font-weight:800;margin-bottom:12px;line-height:1.2;color:var(--primaria)}
+.pilar p{color:var(--texto-suave);font-size:.95rem;line-height:1.7}
 /* Vantagens 6 (linha dupla) */
 .vantagens{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media (max-width:900px){.vantagens{grid-template-columns:repeat(2,1fr)}}
@@ -520,7 +520,6 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
       <a href="#contato">Contato</a>
     </nav>
     <div class="header-cta">
-      <button class="opt-btn" id="tourStart" aria-label="Ver otimizações">✨ Ver otimizações</button>
       <a class="btn btn-cta" href="https://wa.me/5511982396610?text=Ol%C3%A1!%20Vim%20do%20site%20e%20quero%20falar%20com%20a%20Rodrigo%20Junqueira." target="_blank" rel="noopener">WhatsApp</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -571,7 +570,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
     <p class="section-lead">Três pilares sustentam nossa administração de imóvel por temporada em São Paulo — é o que separa uma gestão profissional de um "Airbnb amador".</p>
     <div class="pilares">
       <div class="pilar">
-        <div class="pilar-img"><img src="https://images.unsplash.com/photo-1543286386-2e659306cd6c?w=500&h=312&fit=crop&q=80" alt="Gráfico de crescimento de receita com precificação dinâmica" loading="lazy" width="500" height="312"></div>
+        <div class="pilar-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=375&fit=crop&q=80" alt="Imóveis de alto padrão com valorização e rentabilidade máxima" loading="lazy" width="600" height="375"></div>
         <div class="pilar-body">
           <div class="num">Pilar 01</div>
           <h3>Maximização de lucro</h3>
@@ -579,7 +578,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
         </div>
       </div>
       <div class="pilar">
-        <div class="pilar-img"><img src="https://images.unsplash.com/photo-1576354302919-96748cb8299e?w=500&h=312&fit=crop&q=80" alt="Quarto de hotel com limpeza padrão hoteleiro impecável" loading="lazy" width="500" height="312"></div>
+        <div class="pilar-img"><img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=600&h=375&fit=crop&q=80" alt="Casal feliz fazendo check-in e recebendo as chaves do apartamento" loading="lazy" width="600" height="375"></div>
         <div class="pilar-body">
           <div class="num">Pilar 02</div>
           <h3>Conveniência completa</h3>
@@ -587,7 +586,7 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
         </div>
       </div>
       <div class="pilar">
-        <div class="pilar-img"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=500&h=312&fit=crop&q=80" alt="Atendimento personalizado com gestor exclusivo" loading="lazy" width="500" height="312"></div>
+        <div class="pilar-img"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=375&fit=crop&q=80" alt="Dois profissionais se cumprimentando com sorriso e confiança" loading="lazy" width="600" height="375"></div>
         <div class="pilar-body">
           <div class="num">Pilar 03</div>
           <h3>Atendimento boutique</h3>
