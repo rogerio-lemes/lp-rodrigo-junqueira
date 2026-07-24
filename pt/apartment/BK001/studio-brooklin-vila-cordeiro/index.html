@@ -79,6 +79,23 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
 .nav a{padding:10px 14px;font-weight:600;font-size:14.5px;color:var(--texto);border-radius:8px;position:relative;transition:color .2s}
 .nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;background:var(--secundaria);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 .nav a:hover{color:var(--primaria)}.nav a:hover::after{transform:scaleX(1)}
+.nav-item{position:relative;display:flex;align-items:center}
+.nav-drop-toggle{display:inline-flex;align-items:center;gap:5px;padding:10px 14px;font-weight:600;font-size:14.5px;font-family:inherit;color:var(--texto);background:none;border:0;border-radius:8px;cursor:pointer;transition:color .2s}
+.nav-drop-toggle:hover{color:var(--primaria)}
+.nav-drop-toggle .caret{width:14px;height:14px;transition:transform .25s}
+.dropdown-menu{position:absolute;top:calc(100% + 4px);left:0;min-width:230px;background:#FFF;border:1px solid var(--borda);border-radius:14px;box-shadow:0 16px 36px rgba(15,23,42,.14);padding:8px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:95}
+.has-dropdown:hover .dropdown-menu,.has-dropdown.open .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.has-dropdown:hover .caret,.has-dropdown.open .caret{transform:rotate(180deg)}
+.dropdown-menu a{padding:10px 12px;font-weight:600;font-size:14px;color:var(--texto);border-radius:8px;white-space:nowrap;transition:background .18s,color .18s}
+.dropdown-menu a::after{display:none}
+.dropdown-menu a:hover{background:#f3f4f6;color:var(--primaria)}
+@media (max-width:960px){
+  .nav-item{width:100%;flex-direction:column;align-items:stretch}
+  .nav-drop-toggle{width:100%;justify-content:space-between;padding:14px 12px;font-size:16px;border-bottom:1px solid var(--borda)}
+  .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-radius:0;padding:0;min-width:0;display:none}
+  .has-dropdown.open .dropdown-menu{display:flex}
+  .dropdown-menu a{padding:12px 12px 12px 28px;border-bottom:1px solid var(--borda);font-size:15px;white-space:normal}
+}
 .header-cta{display:flex;align-items:center;gap:10px}
 .opt-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;height:38px;font-size:13px;font-weight:700;color:#FFF;background:linear-gradient(135deg,#4C6FFF,#7C3AED);border-radius:9999px;box-shadow:0 4px 12px rgba(76,111,255,.35);transition:transform .18s}
 .opt-btn:hover{transform:translateY(-1px)}
@@ -342,14 +359,18 @@ h1,h2,h3,h4{line-height:1.15;letter-spacing:-.01em;color:var(--texto)}
     </a>
     <nav class="nav" id="nav">
       <a href="/">Home</a>
-      <a href="/gestao-completa-do-seu-imovel-por-temporada-em-sao-paulo">Gestão</a>
-      <a href="/pt/apartment/OQ07I/studio-moderno-piscina-gym-e-portaria-24h">Flat Santa Cecília</a>
-      <a href="/pt/apartment/JP001/flat-exclusivo-jardim-paulista">Apt. Jardins</a>
-      <a href="/pt/apartment/BK001/studio-brooklin-vila-cordeiro">Studio Brooklin</a>
+      <a href="/gestao-completa-do-seu-imovel-por-temporada-em-sao-paulo">Gestão de Imóvel</a>
+      <div class="nav-item has-dropdown">
+        <button type="button" class="nav-drop-toggle" aria-haspopup="true" aria-expanded="false">Imóveis<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown-menu">
+          <a href="/pt/apartment/OQ07I/studio-moderno-piscina-gym-e-portaria-24h">Flat Santa Cecília</a>
+          <a href="/pt/apartment/JP001/flat-exclusivo-jardim-paulista">Apt. Jardins</a>
+          <a href="/pt/apartment/BK001/studio-brooklin-vila-cordeiro">Studio Brooklin</a>
+        </div>
+      </div>
       <a href="#contato">Contato</a>
     </nav>
     <div class="header-cta">
-      <button class="opt-btn" id="tourStart" aria-label="Ver otimizações">✨ Ver otimizações</button>
       <a class="btn btn-cta" href="https://wa.me/5511982396610?text=Ol%C3%A1!%20Quero%20consultar%20a%20disponibilidade%20do%20Studio%20Brooklin%20Vila%20Cordeiro." target="_blank" rel="noopener">WhatsApp</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -722,6 +743,7 @@ const navBd = document.getElementById('navBackdrop');
 document.getElementById('hamburger').addEventListener('click', () => { nav.classList.toggle('open'); navBd.classList.toggle('open'); });
 navBd.addEventListener('click', () => { nav.classList.remove('open'); navBd.classList.remove('open'); });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); navBd.classList.remove('open'); }));
+document.querySelectorAll('.nav-drop-toggle').forEach(t => t.addEventListener('click', (e) => { e.preventDefault(); const item = t.closest('.has-dropdown'); const open = item.classList.toggle('open'); t.setAttribute('aria-expanded', open ? 'true' : 'false'); }));
 document.getElementById('backTop').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 const io = new IntersectionObserver((entries) => {
   entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('active'), i*80); io.unobserve(e.target); } });
@@ -831,7 +853,6 @@ function nextStep(){ if (ti < steps.length-1) { ti++; renderStep(); } else { clo
 function prevStep(){ if (ti > 0) { ti--; renderStep(); } }
 function closeTour(){ ti = -1; clearHl(); tourBalloon.classList.remove('on'); tourMask.classList.remove('on'); tourBalloon.style.transform = ''; }
 window.nextStep = nextStep; window.prevStep = prevStep; window.closeTour = closeTour;
-document.getElementById('tourStart').addEventListener('click', () => { ti = 0; renderStep(); });
 tourMask.addEventListener('click', closeTour);
 document.addEventListener('keydown', (e) => {
   if (!tourMask.classList.contains('on')) return;
