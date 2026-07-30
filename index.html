@@ -957,6 +957,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section id="video-depoimento" style="padding:70px 0;background:linear-gradient(180deg,#f8f9fb 0%,#fff 100%)">
+  <div class="container reveal" style="text-align:center">
+    <span class="h-kicker">Direto de quem mora</span>
+    <h2 class="section-title">Veja como é a <span class="destaque">experiência real</span></h2>
+    <p class="section-lead" style="max-width:560px;margin:0 auto 36px">Depoimento de uma hóspede que viveu a gestão Rodrigo Junqueira de perto.</p>
+    <div style="display:inline-block;position:relative;width:280px;max-width:90vw;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(14,31,58,.22),0 2px 8px rgba(0,0,0,.08);border:6px solid var(--primaria)">
+      <video id="videoDepoimento" src="/assets/depoimento-rachel.mp4" playsinline preload="metadata" style="display:block;width:100%;border-radius:26px;background:#000" poster="" onclick="this.paused?this.play():this.pause()"></video>
+      <button id="videoBtnPlay" onclick="var v=document.getElementById('videoDepoimento');v.paused?v.play():v.pause()" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(14,31,58,.35);border:none;cursor:pointer;transition:opacity .3s;border-radius:26px">
+        <svg viewBox="0 0 64 64" width="64" height="64" fill="none"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,.92)" stroke="var(--primaria)" stroke-width="2"/><polygon points="26,20 26,44 48,32" fill="var(--primaria)"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var v=document.getElementById('videoDepoimento'),b=document.getElementById('videoBtnPlay');
+  if(!v||!b)return;
+  v.addEventListener('play',function(){b.style.opacity='0';b.style.pointerEvents='none'});
+  v.addEventListener('pause',function(){b.style.opacity='1';b.style.pointerEvents='auto'});
+  v.addEventListener('ended',function(){b.style.opacity='1';b.style.pointerEvents='auto'});
+})();
+</script>
+
 <section id="contato" data-tour="form">
   <div class="container reveal">
     <div class="contact-wrap">
