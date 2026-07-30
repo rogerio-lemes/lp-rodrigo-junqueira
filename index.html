@@ -962,10 +962,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="h-kicker">Direto de quem mora</span>
     <h2 class="section-title">Veja como é a <span class="destaque">experiência real</span></h2>
     <p class="section-lead" style="max-width:560px;margin:0 auto 36px">Depoimento de uma hóspede que viveu a gestão Rodrigo Junqueira de perto.</p>
-    <div style="display:inline-block;position:relative;width:280px;max-width:90vw;border-radius:32px;overflow:hidden;box-shadow:0 20px 60px rgba(14,31,58,.22),0 2px 8px rgba(0,0,0,.08);border:6px solid var(--primaria)">
-      <video id="videoDepoimento" src="/assets/depoimento-rachel.mp4" playsinline preload="metadata" style="display:block;width:100%;border-radius:26px;background:#000" poster="" onclick="this.paused?this.play():this.pause()"></video>
-      <button id="videoBtnPlay" onclick="var v=document.getElementById('videoDepoimento');v.paused?v.play():v.pause()" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(14,31,58,.35);border:none;cursor:pointer;transition:opacity .3s;border-radius:26px">
-        <svg viewBox="0 0 64 64" width="64" height="64" fill="none"><circle cx="32" cy="32" r="30" fill="rgba(255,255,255,.92)" stroke="var(--primaria)" stroke-width="2"/><polygon points="26,20 26,44 48,32" fill="var(--primaria)"/></svg>
+    <div style="display:inline-block;position:relative;width:300px;max-width:85vw;aspect-ratio:9/16;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(14,31,58,.22),0 2px 8px rgba(0,0,0,.08);border:5px solid var(--primaria);background:#000">
+      <video id="videoDepoimento" playsinline preload="auto" poster="/assets/depoimento-rachel-poster.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:23px" onclick="this.paused?this.play():this.pause()">
+        <source src="/assets/depoimento-rachel.mp4" type="video/mp4">
+      </video>
+      <button id="videoBtnPlay" onclick="var v=document.getElementById('videoDepoimento');v.paused?v.play():v.pause()" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(14,31,58,.25);border:none;cursor:pointer;transition:opacity .3s;border-radius:23px;z-index:2">
+        <svg viewBox="0 0 72 72" width="72" height="72" fill="none"><circle cx="36" cy="36" r="34" fill="rgba(255,255,255,.92)" stroke="var(--primaria)" stroke-width="2.5"/><polygon points="30,22 30,50 54,36" fill="var(--primaria)"/></svg>
       </button>
     </div>
   </div>
