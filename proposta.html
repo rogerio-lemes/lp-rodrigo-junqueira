@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Proposta Comercial | Rodrigo Junqueira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<style>
+:root{
+  --primaria:#0E1F3A;--primaria-dark:#091527;--primaria-2:#1E3A5F;
+  --secundaria:#C89B5F;--secundaria-dark:#A67C42;
+  --texto:#1A1B1E;--texto-light:#595D69;
+  --radius:12px;
+  --whatsapp:#25D366;--whatsapp-dark:#128C7E;
+  --borda:#e5e7eb;--muted:#eef1f4;
+  --sombra-sm:0 2px 8px rgba(0,0,0,.08);
+  --sombra:0 4px 16px rgba(0,0,0,.1);
+  --sombra-lg:0 8px 32px rgba(0,0,0,.15);
+  --fundo:#FAFAFA;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body[data-page]{font-family:'Inter',system-ui,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.center{text-align:center}
+h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.15;letter-spacing:-.02em;color:var(--texto)}
+.h-sec{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2;margin-bottom:.5rem}
+.sub-sec{font-size:1rem;color:var(--texto-light);max-width:620px}
+.mx-auto{margin-left:auto;margin-right:auto}
+.hl{color:var(--primaria)}
+.hl-gold{color:var(--secundaria)}
+.eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--secundaria)}
+.eyebrow--center{display:block;text-align:center;margin-bottom:.5rem}
+.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}
+.reveal{opacity:0;transform:translateY(30px);transition:all .6s ease}
+.reveal.vis{opacity:1;transform:none}
+section{padding:64px 0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;height:48px;padding:0 28px;border-radius:var(--radius);font-weight:700;font-size:16px;transition:transform .2s,box-shadow .2s;white-space:nowrap;line-height:1;border:none;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif}
+.btn:hover{transform:translateY(-2px)}
+.btn--gold{background:linear-gradient(135deg,var(--secundaria),var(--secundaria-dark));color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.btn--wpp{background:var(--whatsapp);color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.32)}
+.btn--outline{background:#fff;border:2px solid var(--primaria);color:var(--primaria)}
+.btn--outline-white{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff}
+.btn--block{width:100%}
+.btn--lg{height:54px;font-size:17px;padding:0 32px}
+
+/* TOPBAR */
+.topbar{background:var(--primaria);color:#FFF;font-size:12.5px;padding:8px 0}
+.topbar .container{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.topbar-info{display:flex;flex-wrap:wrap;gap:16px}
+.topbar-info span{display:inline-flex;align-items:center;gap:6px;opacity:.9}
+.topbar-info svg{width:14px;height:14px}
+.topbar a.wpp{color:#FFF;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:80;background:rgba(250,250,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+.header.scrolled{box-shadow:0 2px 10px rgba(15,23,42,.08);border-bottom-color:var(--borda)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.brand{display:flex;align-items:center;color:var(--primaria)}
+.brand-logo{height:44px;width:auto}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:10px 14px;font-weight:600;font-size:14px;color:var(--texto);border-radius:8px;position:relative;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:2px;background:var(--secundaria);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover,.nav a.active{color:var(--primaria)}
+.nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
+.header-cta{display:flex;align-items:center;gap:10px}
+.hamburger{display:none;width:44px;height:44px;place-items:center;border-radius:10px}
+.hamburger svg{width:24px;height:24px}
+@media(max-width:960px){
+  .nav{position:fixed;top:0;right:-100%;bottom:0;width:min(320px,86vw);background:#FFF;padding:80px 24px 24px;flex-direction:column;align-items:stretch;box-shadow:-8px 0 24px rgba(0,0,0,.15);transition:right .3s;z-index:90}
+  .nav.open{right:0}
+  .nav a{padding:14px 12px;font-size:16px;border-bottom:1px solid var(--borda)}
+  .hamburger{display:grid}
+  .header-cta .btn--wpp{display:none}
+}
+.nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:85;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-backdrop.open{opacity:1;pointer-events:auto}
+
+/* GRID */
+.grid-6{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pcard{background:#fff;border:1px solid var(--borda);border-radius:16px;padding:24px;transition:all .3s}
+.pcard:hover{background:linear-gradient(135deg,var(--primaria-dark),var(--primaria));color:#fff;border-color:transparent;transform:translateY(-4px);box-shadow:var(--sombra-lg)}
+.pcard:hover h3,.pcard:hover p{color:#fff}
+.pcard__ico{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:var(--muted);margin-bottom:16px}
+.pcard:hover .pcard__ico{background:rgba(255,255,255,.15)}
+.pcard__ico svg{width:24px;height:24px;color:var(--primaria)}
+.pcard:hover .pcard__ico svg{color:#fff}
+.pcard h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.pcard p{font-size:.875rem;color:var(--texto-light);line-height:1.6}
+
+/* COMPARATIVO */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.comp{border-radius:20px;padding:28px;position:relative}
+.comp.win{background:linear-gradient(155deg,var(--primaria-dark),var(--primaria));color:#fff;border:2px solid var(--secundaria)}
+.comp.lose{background:#fff;border:1px solid var(--borda)}
+.comp ul{list-style:none;padding:0;margin:16px 0 0}
+.comp ul li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:8px;font-size:.9rem}
+.comp.lose ul li{border-bottom-color:var(--borda)}
+.comp .tag-rec{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--secundaria),var(--secundaria-dark));color:var(--primaria);font-size:11px;font-weight:800;padding:4px 16px;border-radius:9999px;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+
+/* 3PACK */
+.gpack{background:#fff;border-radius:20px;padding:28px;box-shadow:var(--sombra-lg);border:1px solid var(--borda);max-width:680px;margin:24px auto 0}
+.gpack-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--borda)}
+.gpack-result{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--borda)}
+.gpack-result:last-child{border-bottom:none}
+.gpack-rank{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.85rem;flex:0 0 32px}
+.gpack-rank.r1{background:linear-gradient(135deg,var(--secundaria),var(--secundaria-dark));color:#fff}
+.gpack-rank.r2,.gpack-rank.r3{background:var(--muted);color:var(--texto-light)}
+
+/* IMPL */
+.impl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.impl-item{background:#fff;border:1px solid var(--borda);border-radius:16px;padding:24px;text-align:center;transition:all .3s}
+.impl-item:hover{transform:translateY(-4px);box-shadow:var(--sombra-lg);border-color:rgba(200,155,95,.3)}
+.impl-num{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:var(--secundaria);opacity:.5;line-height:1;margin-bottom:12px}
+.impl-item:hover .impl-num{opacity:1}
+.impl-item h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.impl-item p{font-size:.875rem;color:var(--texto-light);line-height:1.6}
+.impl-tag{display:inline-block;font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:9999px;margin-top:10px}
+.tag-hoje{background:rgba(11,160,80,.12);color:#0A6E38}
+.tag-logo{background:rgba(200,155,95,.15);color:#7C5A2A}
+
+/* PLANS */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.plan{background:#fff;border:1px solid var(--borda);border-radius:20px;padding:28px;position:relative;display:flex;flex-direction:column}
+.plan.rec{background:linear-gradient(155deg,var(--primaria-dark),#0a4d30);border:2px solid var(--secundaria);color:#fff;box-shadow:var(--sombra-lg)}
+.plan .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--primaria);color:#fff;font-size:.72rem;font-weight:700;padding:4px 16px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em}
+.plan h3{font-size:1.3rem;font-weight:800;margin:8px 0 4px}
+.plan .desc{font-size:.85rem;opacity:.8;margin-bottom:16px}
+.plan ul{list-style:none;padding:0;margin:0 0 20px;flex:1}
+.plan li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:8px;font-size:.82rem}
+.plan:not(.rec) li{border-bottom-color:var(--borda)}
+.plan li svg{width:16px;height:16px;flex:0 0 auto}
+.plan.rec li svg{color:#4ADE80}
+.plan:not(.rec) li svg{color:#0BA050}
+.feat-hl{font-weight:700}
+.plan-urgency{background:rgba(255,255,255,.08);border-radius:10px;padding:10px 14px;font-size:.78rem;text-align:center;margin:12px 0}
+.plan:not(.rec) .plan-urgency{background:var(--muted)}
+
+/* REFLITA */
+.reflita-list{display:flex;flex-direction:column;gap:12px;margin-top:24px;max-width:680px}
+.reflita-item{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border-radius:12px;border:1px solid var(--borda);font-size:.92rem}
+.reflita-icon{font-size:1.4rem;flex:0 0 auto}
+
+/* BONUS */
+.bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.bonus-item{background:#fff;border-radius:16px;padding:26px;border:1px solid var(--borda);box-shadow:var(--sombra-sm);display:flex;gap:18px;align-items:flex-start;transition:all .3s}
+.bonus-item:hover{transform:translateY(-4px);box-shadow:var(--sombra-lg);border-color:rgba(200,155,95,.3)}
+.bonus-icon{width:52px;height:52px;flex:0 0 52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(200,155,95,.18),rgba(200,155,95,.06));font-size:1.4rem}
+.bonus-item h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.bonus-item p{font-size:.875rem;color:var(--texto-light);line-height:1.6}
+
+/* AUTORIDADE */
+.auth-section{background:linear-gradient(155deg,var(--primaria-dark),var(--primaria));padding:64px 0;color:#fff}
+.pstat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
+.pstat{text-align:center}
+.pstat .n{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:var(--secundaria);line-height:1}
+.pstat .l{font-size:.82rem;opacity:.7;margin-top:6px}
+
+/* CTA FINAL */
+.cta-final{background:linear-gradient(135deg,var(--primaria-dark),var(--primaria));border-radius:24px;padding:48px;color:#fff;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;box-shadow:var(--sombra-lg)}
+.cta-final h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:14px}
+.cta-final p{opacity:.85;font-size:.95rem;margin-bottom:24px;line-height:1.65}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* CONSULTOR */
+.consultor-card{background:#fff;border-radius:20px;padding:40px;box-shadow:var(--sombra-lg);border:1px solid var(--borda);display:flex;gap:32px;align-items:flex-start;max-width:760px;margin:0 auto}
+.consultor-initials{width:100px;height:100px;flex:0 0 100px;border-radius:50%;background:linear-gradient(135deg,var(--primaria),var(--primaria-2));display:grid;place-items:center;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;box-shadow:0 6px 20px rgba(14,31,58,.2)}
+.consultor-body h3{font-size:1.2rem;font-weight:700;margin-bottom:4px}
+.consultor-role{font-size:.85rem;color:var(--texto-light);margin-bottom:16px}
+.consultor-contacts{display:flex;flex-direction:column;gap:9px}
+.consultor-contact{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--texto-light)}
+.consultor-contact svg{width:16px;height:16px;color:var(--secundaria);flex:0 0 auto}
+.consultor-contact a{color:var(--primaria);font-weight:600}
+
+/* FOOTER */
+.ft{background:var(--primaria);color:rgba(255,255,255,.75);padding:56px 0 28px}
+.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:40px}
+.ft h4{color:#FFF;font-family:'Space Grotesk',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft ul li a{font-size:.86rem;opacity:.7;transition:opacity .2s}
+.ft ul li a:hover{opacity:1}
+.ft .desc{font-size:.86rem;opacity:.65;line-height:1.65;margin-top:14px}
+.ft .nap{display:flex;flex-direction:column;gap:8px}
+.ft .nap span,.ft .nap a{font-size:.86rem;opacity:.7}
+.ft .nap a:hover{opacity:1}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-size:.79rem;opacity:.55}
+.ft-bottom a{color:var(--secundaria);font-weight:700;opacity:1}
+
+/* FLOAT */
+.float-wa{position:fixed;bottom:28px;right:28px;z-index:60;width:54px;height:54px;border-radius:50%;background:var(--whatsapp);color:#FFF;display:grid;place-items:center;box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform .2s}
+.float-wa:hover{transform:scale(1.08)}
+.back-top{position:fixed;bottom:92px;right:28px;z-index:59;width:40px;height:40px;border-radius:10px;background:var(--primaria);color:#FFF;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.back-top.show{opacity:1;pointer-events:auto}
+
+/* MODAL */
+body.precos-bloqueados .price-lock{filter:blur(6px);user-select:none;pointer-events:none}
+body.precos-bloqueados .price-lock::after{content:''}
+.modal-precos{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center}
+.modal-precos.ativo{display:flex}
+.modal-precos-box{background:#fff;border-radius:16px;padding:2rem;max-width:420px;width:90%;text-align:center;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.modal-precos-box h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--primaria);margin-bottom:8px}
+.modal-precos-box p{color:var(--texto-light);font-size:.92rem;margin-bottom:20px}
+.modal-precos-box input{width:100%;height:48px;padding:0 16px;border:1.5px solid var(--borda);border-radius:10px;font:inherit;font-size:14.5px;color:var(--texto);margin-bottom:10px;outline:none;background:#fff;transition:border-color .2s;display:block}
+.modal-precos-box input:focus{border-color:var(--secundaria)}
+#mpBtn{width:100%;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--primaria),var(--primaria-2));color:#FFF;font-weight:700;font-size:15px;font-family:'Inter',sans-serif;cursor:pointer;border:none;margin-top:4px;transition:opacity .2s}
+#mpBtn:hover{opacity:.88}
+#mpBtn:disabled{opacity:.6;cursor:not-allowed}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .prop-hero__grid,.compare,.plans,.cta-final{grid-template-columns:1fr}
+  .grid-6{grid-template-columns:1fr 1fr}
+  .plan.rec{order:-1}
+  section{padding:40px 0}
+  .impl-grid{grid-template-columns:repeat(2,1fr)}
+  .bonus-grid{grid-template-columns:1fr}
+  .pstat-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .consultor-card{flex-direction:column;align-items:center;text-align:center;padding:28px}
+}
+@media(max-width:480px){
+  .grid-6{grid-template-columns:1fr}
+  .impl-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .topbar-info span:first-child{display:none}
+}
+
+/* PRINT */
+@media print{
+  .topbar,.float-wa,.back-top,.modal-precos,.hamburger,.header-cta{display:none!important}
+  body{color:#000}
+}
+</style>
+</head>
+
+<body class="precos-bloqueados" data-page="proposta">
+
+<!-- 01 TOPBAR + HEADER + DRAWER -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Sao Paulo, Av. Paulista 1636, Cerqueira Cesar
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Seg-Dom 08h-22h
+      </span>
+    </div>
+    <a class="wpp" href="https://wa.me/5511982396610" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+      (11) 98239-6610
+    </a>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container">
+    <a class="brand" href="/">
+      <div class="brand-logo">
+        <svg viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C23,17 10,17 10,30 C10,43 23,43 30,30 C37,17 50,17 50,30 C50,43 37,43 30,30" stroke="currentColor" stroke-width="2.2" fill="none"/><path d="M30,30 C23,17 10,17 10,30 C10,43 23,43 30,30 C37,17 50,17 50,30 C50,43 37,43 30,30" stroke="currentColor" stroke-width="4.5" fill="none" opacity=".08"/><line x1="72" y1="10" x2="72" y2="50" stroke="currentColor" stroke-width="1" opacity=".3"/><text x="84" y="28" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="currentColor">RODRIGO</text><text x="84" y="44" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="currentColor">JUNQUEIRA</text><text x="84" y="56" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="7.5" font-weight="400" letter-spacing="2.5" fill="currentColor" opacity=".5">GESTAO DE IMOVEIS E HOSPITALIDADE</text></svg>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="/">Home</a>
+      <a href="/gestao-completa-do-seu-imovel-por-temporada-em-sao-paulo">Gestao de Imovel</a>
+      <a href="/pt/apartment/OQ07I/studio-moderno-piscina-gym-e-portaria-24h">Studio Higienopolis</a>
+      <a href="/pt/contact">Contato</a>
+      <a href="/proposta" class="active">Proposta</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn--wpp" href="https://wa.me/5511982396610?text=Ol%C3%A1!%20Vim%20da%20proposta%20e%20quero%20conversar." target="_blank" rel="noopener" style="height:40px;font-size:14px;padding:0 18px">WhatsApp</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main>
+
+<!-- HERO (section#topo) -->
+<section id="topo" style="background:linear-gradient(125deg,var(--primaria-dark) 0%,var(--primaria-2) 55%,var(--primaria) 120%);color:#fff;padding:80px 0 64px;position:relative;overflow:hidden">
+  <div class="container">
+    <div class="prop-hero__grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div>
+        <span class="prop-eyebrow" style="display:inline-block;background:rgba(255,255,255,.12);border-radius:20px;padding:6px 16px;font-size:.72rem;font-weight:600;letter-spacing:.06em;margin-bottom:16px">Proposta comercial · Mercado Open</span>
+        <h1 style="font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:800;line-height:1.15;margin:0 0 16px;color:#fff">A <span style="color:var(--secundaria)">Rodrigo Junqueira</span> na primeira pagina do Google dentro de Sao Paulo</h1>
+        <p class="lead" style="font-size:1.05rem;opacity:.85;line-height:1.7;margin-bottom:24px">Todos os dias proprietarios de imoveis e hospedes em Sao Paulo pesquisam por gestao de temporada e aluguel por temporada no Google. Nos colocamos a Rodrigo Junqueira na frente de todos eles, 24 horas por dia, sem depender de anuncios.</p>
+        <div class="prop-selos" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px">
+          <span style="background:rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:.72rem;font-weight:600">+10 anos de mercado</span>
+          <span style="background:rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:.72rem;font-weight:600">4.8 no Google · 127 avaliacoes</span>
+          <span style="background:rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:.72rem;font-weight:600">Metodologia propria</span>
+          <span style="background:rgba(255,255,255,.12);border-radius:20px;padding:6px 14px;font-size:.72rem;font-weight:600">100% plataforma propria</span>
+        </div>
+        <div class="prop-hero__btns" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#planos" class="btn btn--gold btn--lg">Conhecer os planos</a>
+          <a href="https://wa.me/5534988634055" target="_blank" class="btn btn--wpp btn--lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp</a>
+          <button onclick="document.getElementById('modalPrecos').classList.add('ativo')" class="btn btn--outline-white btn--lg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Ver valores</button>
+        </div>
+      </div>
+      <div class="map-mock" style="background:#fff;border-radius:20px;box-shadow:var(--sombra-lg);overflow:hidden;aspect-ratio:4/3">
+        <iframe src="https://www.google.com/maps?q=Av.%20Paulista%2C%201636%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200&z=16&output=embed" width="100%" height="100%" style="border:0" loading="lazy" title="Mapa Rodrigo Junqueira"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAFEGO ORGANICO (section#organico) -->
+<section id="organico">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Por que trafego organico</span>
+      <h2 class="h-sec">O Google trabalha <span class="hl-gold">para voce</span>, 24h por dia</h2>
+      <p class="sub-sec mx-auto">Proprietarios e hospedes em Sao Paulo pesquisam por gestao de temporada, aluguel por temporada e studios mobiliados todos os dias. Quem aparece primeiro, fecha primeiro.</p>
+    </div>
+    <div class="grid-6 mt-32">
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Primeira pagina do Google</h3>
+        <p>Proprietarios que buscam "gestao de imovel por temporada em SP" encontram voce antes de qualquer concorrente.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Leads mais qualificados</h3>
+        <p>Quem pesquisa ativamente ja tem intencao de contratar. Trafego organico atrai donos de imoveis prontos para decidir.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></div>
+        <h3>Autoridade que cresce</h3>
+        <p>Cada mes o site ganha mais relevancia. Diferente do pago, o organico nao para quando o investimento pausa.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Economia todo dia</h3>
+        <p>Zero custo por clique. Enquanto concorrentes pagam R$ 5 a R$ 15 por visita no Google Ads, voce aparece de graca.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+        <h3>Cada clique, um lead</h3>
+        <p>Site otimizado para converter: formularios, WhatsApp e IA de atendimento capturam o visitante no momento da busca.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg></div>
+        <h3>Resultados mensuraveis</h3>
+        <p>Relatorios mensais com trafego, posicoes no Google, leads gerados e conversoes. Voce acompanha cada metrica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVO (section#comparativo) -->
+<section id="comparativo">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Comparativo</span>
+      <h2 class="h-sec">Organico vs Pago: <span class="hl-gold">qual funciona melhor?</span></h2>
+      <p class="sub-sec mx-auto">Trafego pago traz resultado rapido, mas para quando voce para de pagar. Trafego organico constroi um ativo permanente.</p>
+    </div>
+    <div class="compare mt-32">
+      <div class="comp win">
+        <span class="tag-rec">Recomendado</span>
+        <h3 style="font-size:1.2rem;font-weight:800;margin:12px 0 4px;color:#fff">Trafego Organico</h3>
+        <p style="opacity:.75;font-size:.85rem;margin-bottom:12px">Posicionamento natural no Google, sem custo por clique.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Custo zero por clique</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Resultados acumulam com o tempo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Leads mais qualificados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Constroi autoridade da marca</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Funciona 24h, inclusive feriados</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Nao depende de orcamento diario</li>
+        </ul>
+      </div>
+      <div class="comp lose">
+        <h3 style="font-size:1.2rem;font-weight:800;margin:0 0 4px">Trafego Pago</h3>
+        <p style="color:var(--texto-light);font-size:.85rem;margin-bottom:12px">Anuncios no Google Ads: voce paga por cada clique.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg> R$ 5 a R$ 15 por clique</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg> Para de aparecer quando o saldo acaba</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg> Concorrencia eleva o custo todo mes</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg> Nao constroi ativo de longo prazo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg> Muitos cliques sem intencao real</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg> Precisa de gestao constante</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRATEGIA (section#estrategia) -->
+<section id="estrategia">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Como funciona</span>
+      <h2 class="h-sec">A estrategia que coloca voce <span class="hl-gold">no topo</span></h2>
+      <p class="sub-sec mx-auto">Seis pilares de execucao para transformar a presenca digital da Rodrigo Junqueira em maquina de captacao de proprietarios e hospedes.</p>
+    </div>
+    <div class="grid-6 mt-32">
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Site e Google otimizados</h3>
+        <p>Pagina dedicada para captar proprietarios e hospedes, com SEO tecnico otimizado para os principais termos de busca do segmento.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg></div>
+        <h3>Conteudo que ranqueia</h3>
+        <p>Artigos e paginas de bairro (Higienopolis, Brooklin, Jardins) que posicionam a Rodrigo Junqueira como referencia em temporada em SP.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10 20-1.2-5L4 12l5.8-3L11 4l1.2 5L18 12l-5.8 3L11 20"/></svg></div>
+        <h3>SEO tecnico</h3>
+        <p>Schema LocalBusiness, sitemap, velocidade de carregamento e indexacao correta. Tudo que o Google precisa para exibir voce no topo.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Google Meu Negocio</h3>
+        <p>Perfil 100% otimizado com fotos, categorias, posts e respostas a avaliacoes. A porta de entrada para o Google Maps e 3-Pack.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+        <h3>Backlinks estrategicos</h3>
+        <p>Links de sites relevantes do setor imobiliario e turismo que aumentam a autoridade do dominio e aceleram o posicionamento.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+        <h3>Monitoramento continuo</h3>
+        <p>Relatorios mensais com posicoes, trafego, leads e plano de acoes. Voce acompanha cada resultado e sabe o retorno do investimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE 3-PACK (section#3pack) -->
+<section id="3pack">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Google Maps</span>
+      <h2 class="h-sec">Sua empresa no <span class="hl-gold">3-Pack do Google</span></h2>
+      <p class="sub-sec mx-auto">O 3-Pack e a caixa com 3 resultados que aparece no topo do Google Maps. Quem esta la recebe ate 70% dos cliques de busca local.</p>
+    </div>
+    <div class="gpack">
+      <div class="gpack-header">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#4285F4"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2"/></svg>
+        <div>
+          <div style="font-size:.78rem;color:var(--texto-light)">Resultados do Google Maps para</div>
+          <div style="font-weight:700;font-size:.92rem">"gestao de imovel por temporada sao paulo"</div>
+        </div>
+      </div>
+      <div class="gpack-result">
+        <div class="gpack-rank r1">1</div>
+        <div style="flex:1">
+          <div style="font-weight:700;font-size:.95rem;color:var(--primaria)">Rodrigo Junqueira Imoveis</div>
+          <div style="font-size:.8rem;color:var(--texto-light)">4.8 &#9733; (127) · Av. Paulista, 1636 · Aberto agora</div>
+        </div>
+        <span style="background:rgba(11,160,80,.1);color:#0A6E38;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:9999px">Voce aqui</span>
+      </div>
+      <div class="gpack-result">
+        <div class="gpack-rank r2">2</div>
+        <div style="flex:1">
+          <div style="font-weight:600;font-size:.9rem;color:var(--texto-light)">GestSP Imoveis</div>
+          <div style="font-size:.8rem;color:var(--texto-light)">4.2 &#9733; (34) · R. Augusta, 2100</div>
+        </div>
+      </div>
+      <div class="gpack-result">
+        <div class="gpack-rank r3">3</div>
+        <div style="flex:1">
+          <div style="font-weight:600;font-size:.9rem;color:var(--texto-light)">AirAdmin SP</div>
+          <div style="font-size:.8rem;color:var(--texto-light)">3.9 &#9733; (18) · Al. Santos, 880</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FERRAMENTAS (section#ferramentas) -->
+<section id="ferramentas">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Ferramentas incluidas</span>
+      <h2 class="h-sec">Tudo que voce precisa, <span class="hl-gold">numa so plataforma</span></h2>
+      <p class="sub-sec mx-auto">Cada ferramenta abaixo esta inclusa no seu plano. Nada de contratar fornecedores avulsos.</p>
+    </div>
+    <div class="grid-6 mt-32">
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Site SEO</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Google Meu Negocio</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M16 20V8h-4"/></svg></div>
+        <h3>IA de atendimento</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>CRM inteligente</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>WhatsApp multiagente</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg></div>
+        <h3>Artigos SEO</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+        <h3>Backlinks</h3>
+      </div>
+      <div class="pcard" style="text-align:center">
+        <div class="pcard__ico" style="margin:0 auto 16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+        <h3>Push notifications</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPLANTACAO (section#implantacao) -->
+<section id="implantacao">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Passo a passo</span>
+      <h2 class="h-sec">Da assinatura aos <span class="hl-gold">primeiros resultados</span></h2>
+      <p class="sub-sec mx-auto">Processo claro, sem surpresas. Em 30 dias seu negocio ja estara captando leads de forma automatizada.</p>
+    </div>
+    <div class="impl-grid mt-32">
+      <div class="impl-item">
+        <div class="impl-num">01</div>
+        <h3>Reuniao de alinhamento</h3>
+        <p>Conversamos sobre seu negocio, objetivos, diferenciais e publico. Definimos o posicionamento digital ideal.</p>
+        <span class="impl-tag tag-hoje">Hoje</span>
+      </div>
+      <div class="impl-item">
+        <div class="impl-num">02</div>
+        <h3>Contrato digital</h3>
+        <p>Contrato via assinatura digital. Aprovacao em ate 48h. Pagamento libera o inicio imediato.</p>
+        <span class="impl-tag tag-logo">Em 48h</span>
+      </div>
+      <div class="impl-item">
+        <div class="impl-num">03</div>
+        <h3>Implantacao completa</h3>
+        <p>Site, CRM, Google Meu Negocio e atendente virtual configurados e funcionando em ate 10 dias uteis.</p>
+        <span class="impl-tag tag-logo">Em 10 dias</span>
+      </div>
+      <div class="impl-item">
+        <div class="impl-num">04</div>
+        <h3>Primeiro relatorio</h3>
+        <p>Apos 30 dias voce recebe o relatorio completo: trafego, leads, conversoes e plano para o proximo mes.</p>
+        <span class="impl-tag tag-logo">Em 30 dias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS E PRECOS (section#planos) -->
+<section id="planos">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Investimento</span>
+      <h2 class="h-sec">Escolha o plano <span class="hl-gold">ideal para voce</span></h2>
+      <p class="sub-sec mx-auto">Dois caminhos para transformar sua presenca digital. Valores desbloqueados apos confirmar seu interesse.</p>
+    </div>
+    <div class="plans mt-32">
+
+      <div class="plan rec">
+        <span class="tag">Recomendado</span>
+        <h3>Plano Escala Local</h3>
+        <p class="desc">Para quem quer aparecer na 1a pagina do Google e crescer de forma organica e continua em Sao Paulo e regiao.</p>
+        <ul>
+          <li class="feat-hl"><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Resolvemos site e Google desconfigurados e sem otimizacao</li>
+          <li class="feat-hl"><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Criamos conteudos para manter site, Google Meu Negocio e redes atualizados</li>
+          <li class="feat-hl"><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Cadastro e Otimizacao SEO de ate 10 imoveis por mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Cadastro e Otimizacao SEO de ate 02 paginas de servico por mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Site profissional com SEO otimizado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> SEO Local + Google Meu Negocio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Captacao de leads + CRM inteligente</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> IA de atendimento 24h</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> WhatsApp integrado (ate 10 atendentes)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 4 artigos SEO por mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 2 backlinks por mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Notificacoes Push</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Monitoramento de posicionamento no Google</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Site que vira app no celular</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Hospedagem, suporte e acompanhamento mensal</li>
+        </ul>
+        <div style="text-align:center;margin-top:1rem">
+          <p style="font-size:0.8rem;opacity:0.75;margin-bottom:.35rem">Implantacao: <span class="price-lock" data-preco="implantacao_1">R$ &#9679;&#9679;&#9679;</span> · <span class="price-lock" data-preco="implantacao_parcelado">R$ &#9679;&#9679;&#9679;</span></p>
+          <p style="font-size:2rem;font-weight:800;line-height:1.1;margin:0"><span class="price-lock" data-preco="mensalidade_1">R$ &#9679;&#9679;&#9679;</span><span style="font-size:1rem;font-weight:400">/mes</span></p>
+          <p style="font-size:0.75rem;opacity:0.7;margin-top:.35rem">nos primeiros 6 meses. A partir do 7o mes: <span class="price-lock" data-preco="mensalidade_2">R$ &#9679;&#9679;&#9679;</span>/mes</p>
+        </div>
+        <div class="plan-urgency">Fechando hoje (<script>document.write(new Date().toLocaleDateString('pt-BR'))</script>): 1a mensalidade so em <script>var d=new Date();d.setDate(d.getDate()+30);document.write(d.toLocaleDateString('pt-BR'))</script> (30 dias depois).</div>
+        <a href="#planos" onclick="document.getElementById('modalPrecos').classList.add('ativo');return false" class="btn btn--gold btn--block btn--lg">Quero a Escala Local</a>
+      </div>
+
+      <div class="plan">
+        <h3>Plano Presenca Profissional</h3>
+        <p class="desc">Para quem precisa de um site profissional com presenca digital basica e suporte tecnico.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Resolvemos um problema de site e Google desconfigurado e sem otimizacao</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Hospedagem profissional do site</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Suporte tecnico especializado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 1 hora/mes para atualizacoes no site</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Ate 5 e-mails profissionais</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Google Meu Negocio otimizado 100%</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#0BA050" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Treinamento de gestao do Google Meu Negocio</li>
+        </ul>
+        <div style="text-align:center;margin-top:1rem">
+          <p style="font-size:0.8rem;opacity:0.75;margin-bottom:.35rem">Sem taxa de implantacao</p>
+          <p style="font-size:2rem;font-weight:800;line-height:1.1;margin:0"><span class="price-lock" data-preco="mensalidade_3">R$ &#9679;&#9679;&#9679;</span><span style="font-size:1rem;font-weight:400">/mes</span></p>
+        </div>
+        <div class="plan-urgency">Fechando hoje (<script>document.write(new Date().toLocaleDateString('pt-BR'))</script>): 1a mensalidade so em <script>var d2=new Date();d2.setDate(d2.getDate()+30);document.write(d2.toLocaleDateString('pt-BR'))</script> (30 dias depois).</div>
+        <a href="#planos" onclick="document.getElementById('modalPrecos').classList.add('ativo');return false" class="btn btn--outline btn--block btn--lg">Quero a Presenca Profissional</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REFLITA (section#reflita) -->
+<section id="reflita">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Reflexao</span>
+      <h2 class="h-sec">Por <span class="price-lock hl-gold" data-preco="mensalidade_1">R$ &#9679;&#9679;&#9679;</span>, voce nao paga nem um estagiario</h2>
+      <p class="sub-sec mx-auto">Compare o valor do investimento com custos que voce ja conhece:</p>
+    </div>
+    <div class="reflita-list mx-auto mt-24">
+      <div class="reflita-item"><span class="reflita-icon">&#9749;</span> Um cafezinho por dia ja custa mais do que isso no fim do mes</div>
+      <div class="reflita-item"><span class="reflita-icon">&#128188;</span> Um estagiario de marketing CLT custa de R$ 1.800 a R$ 2.500/mes (so o salario)</div>
+      <div class="reflita-item"><span class="reflita-icon">&#128187;</span> Uma agencia de trafego pago cobra R$ 2.000/mes + orcamento de midia de R$ 3.000+</div>
+      <div class="reflita-item"><span class="reflita-icon">&#128200;</span> Um unico contrato de gestao de temporada ja paga o investimento do trimestre</div>
+      <div class="reflita-item"><span class="reflita-icon">&#127919;</span> Aqui voce recebe site, SEO, CRM, IA, conteudo e suporte num so lugar</div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS 1 (section#bonus1) -->
+<section id="bonus1">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Bonus exclusivo 1</span>
+      <h2 class="h-sec">Suas redes sociais sempre ativas, <span class="hl-gold">por nossa conta</span></h2>
+      <p class="sub-sec mx-auto">Alem do site e do Google, cuidamos tambem da presenca nas redes sociais.</p>
+    </div>
+    <div class="bonus-grid mt-32">
+      <div class="bonus-item">
+        <div class="bonus-icon">&#128247;</div>
+        <div>
+          <h3>Posts e stories semanais</h3>
+          <p>Conteudo visual e textual para Instagram e Facebook com identidade visual profissional e calendario editorial.</p>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-icon">&#128202;</div>
+        <div>
+          <h3>Relatorio de engajamento</h3>
+          <p>Acompanhamento mensal de metricas das redes: alcance, seguidores, cliques e interacoes com potenciais clientes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS 2 (section#bonus2) -->
+<section id="bonus2">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center">Bonus exclusivo 2</span>
+      <h2 class="h-sec">Recuperamos quem ja <span class="hl-gold">procurou voce no Google</span></h2>
+      <p class="sub-sec mx-auto">Pessoas que visitaram seu site e nao converteram recebem lembretes automaticos para voltar.</p>
+    </div>
+    <div class="bonus-grid mt-32">
+      <div class="bonus-item">
+        <div class="bonus-icon">&#128276;</div>
+        <div>
+          <h3>Push notifications</h3>
+          <p>Visitantes que aceitam notificacoes recebem alertas sobre novos imoveis, promocoes e conteudos relevantes.</p>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-icon">&#128231;</div>
+        <div>
+          <h3>CRM de reengajamento</h3>
+          <p>Leads que preencheram formulario mas nao fecharam recebem follow-up automatico por WhatsApp e e-mail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE (section#porque-mopen) -->
+<section id="porque-mopen" class="auth-section">
+  <div class="container reveal">
+    <div class="center">
+      <span class="eyebrow eyebrow--center" style="color:rgba(255,255,255,.6)">Por que a Mercado Open</span>
+      <h2 class="h-sec" style="color:#fff">Numeros que falam <span style="color:var(--secundaria)">por nos</span></h2>
+      <p class="sub-sec mx-auto" style="color:rgba(255,255,255,.7)">A Mercado Open e especialista em posicionamento organico para negocios locais. Resultados reais, com transparencia total.</p>
+    </div>
+    <div class="pstat-grid">
+      <div class="pstat">
+        <div class="n">+8</div>
+        <div class="l">anos de experiencia em SEO local</div>
+      </div>
+      <div class="pstat">
+        <div class="n">+600</div>
+        <div class="l">clientes atendidos em todo o Brasil</div>
+      </div>
+      <div class="pstat">
+        <div class="n">15</div>
+        <div class="l">profissionais na equipe</div>
+      </div>
+      <div class="pstat">
+        <div class="n">97%</div>
+        <div class="l">taxa de satisfacao dos clientes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="padding:64px 0">
+  <div class="container reveal">
+    <div class="cta-final">
+      <div>
+        <h2>Vamos colocar a Rodrigo Junqueira na primeira pagina do Google?</h2>
+        <p>Esta proposta foi preparada exclusivamente para voce. Fale agora com Rogerio Lemes e descubra qual plano faz mais sentido para seu negocio.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/5534988634055?text=Ol%C3%A1%20Rog%C3%A9rio!%20Vi%20a%20proposta%20completa%20da%20Rodrigo%20Junqueira%20e%20quero%20fechar!" target="_blank" class="btn btn--wpp btn--lg"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp</a>
+          <a href="#planos" class="btn btn--outline-white btn--lg">Ver planos</a>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--secundaria),var(--primaria));display:grid;place-items:center;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;margin:0 auto 16px;box-shadow:0 8px 24px rgba(0,0,0,.3)">RL</div>
+        <div style="font-weight:700;font-size:1.1rem">Rogerio Lemes</div>
+        <div style="opacity:.7;font-size:.85rem">Consultor Comercial</div>
+        <div style="opacity:.6;font-size:.8rem;margin-top:4px">(34) 98863-4055</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTOR -->
+<section id="consultor">
+  <div class="container reveal">
+    <div class="center" style="margin-bottom:36px">
+      <span class="eyebrow eyebrow--center">Quem apresenta esta proposta</span>
+      <h2 class="h-sec">Seu consultor <span class="hl-gold">Mercado Open</span></h2>
+    </div>
+    <div class="consultor-card">
+      <div class="consultor-initials" aria-label="Rogerio Lemes">RL</div>
+      <div class="consultor-body">
+        <h3>Rogerio Lemes</h3>
+        <div class="consultor-role">Consultor Comercial · Mercado Open</div>
+        <div class="consultor-contacts">
+          <div class="consultor-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 20 20 0 0 1-8.6-3 20 20 0 0 1-6-6 20 20 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.6 3.3a2 2 0 0 1-.5 1.9l-1.3 1.3a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.9-.5l3.3.6a2 2 0 0 1 1.7 2Z"/></svg>
+            <a href="tel:+5534988634055">(34) 98863-4055</a>
+          </div>
+          <div class="consultor-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:comercial@mercadoopen.com.br">comercial@mercadoopen.com.br</a>
+          </div>
+          <div class="consultor-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="https://www.mercadoopen.com.br" target="_blank" rel="noopener">www.mercadoopen.com.br</a>
+          </div>
+        </div>
+        <div style="margin-top:18px">
+          <a class="btn btn--wpp" href="https://wa.me/5534988634055?text=Ol%C3%A1%20Rog%C3%A9rio!%20Tenho%20interesse%20na%20proposta%20para%20a%20Rodrigo%20Junqueira." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="container">
+    <div class="ft-grid">
+      <div>
+        <a class="brand" href="/" style="color:#FFF">
+          <div class="brand-logo">
+            <svg viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C23,17 10,17 10,30 C10,43 23,43 30,30 C37,17 50,17 50,30 C50,43 37,43 30,30" stroke="currentColor" stroke-width="2.2" fill="none"/><line x1="72" y1="10" x2="72" y2="50" stroke="currentColor" stroke-width="1" opacity=".3"/><text x="84" y="28" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="currentColor">RODRIGO</text><text x="84" y="44" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="currentColor">JUNQUEIRA</text><text x="84" y="56" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="7.5" font-weight="400" letter-spacing="2.5" fill="currentColor" opacity=".5">GESTAO DE IMOVEIS E HOSPITALIDADE</text></svg>
+          </div>
+        </a>
+        <p class="desc">Administracao profissional de imovel por temporada em Sao Paulo. Mais lucro, menos dor de cabeca. Gestao completa: anuncios, hospedes, precificacao e faturamento.</p>
+      </div>
+      <div>
+        <h4>Navegacao</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/gestao-completa-do-seu-imovel-por-temporada-em-sao-paulo">Gestao de Imovel</a></li>
+          <li><a href="/pt/locacao-temporada">Locacao por Temporada</a></li>
+          <li><a href="/pt/search">Buscar Imoveis</a></li>
+          <li><a href="/pt/contact">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicos</h4>
+        <ul>
+          <li><a href="/gestao-completa-do-seu-imovel-por-temporada-em-sao-paulo">Gestao completa</a></li>
+          <li><a href="/pt/apartment/OQ07I/studio-moderno-piscina-gym-e-portaria-24h">Studio Higienopolis</a></li>
+          <li><a href="/pt/quem-somos">Quem somos</a></li>
+          <li><a href="/pt/terms_and_conditions">Termos e Condicoes</a></li>
+          <li><a href="/pt/page/60345845008db5a7fb540671">Politica de Privacidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <div class="nap">
+          <span>Av. Paulista, 1636, Sala 1105<br>Cerqueira Cesar, Sao Paulo, SP</span>
+          <a href="tel:+5511982396610">(11) 98239-6610</a>
+          <a href="mailto:contato@rodrigojunqueira.com.br">contato@rodrigojunqueira.com.br</a>
+          <span>Seg-Dom · 08h-22h</span>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div>&copy; <span id="year"></span> Rodrigo Junqueira Imoveis · <a href="/pt/page/60345845008db5a7fb540671">Politica de Privacidade</a> · <a href="/pt/terms_and_conditions">Termos de Uso</a></div>
+      <div>Powered by <a href="https://www.mercadoopen.com.br" target="_blank" rel="noopener">Mercado Open</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Float WhatsApp -->
+<a class="float-wa" href="https://wa.me/5534988634055?text=Ol%C3%A1%20Rog%C3%A9rio!%20Vi%20a%20proposta%20da%20Rodrigo%20Junqueira%20e%20quero%20conversar." target="_blank" rel="noopener" aria-label="WhatsApp Consultor">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+</a>
+
+<button class="back-top" id="backTop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 15 6-6 6 6"/></svg>
+</button>
+
+<!-- MODAL DE DESBLOQUEIO DE PRECOS -->
+<div class="modal-precos" id="modalPrecos">
+  <div class="modal-precos-box">
+    <button onclick="document.getElementById('modalPrecos').classList.remove('ativo')" style="position:absolute;top:.75rem;right:.75rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#666;line-height:1" aria-label="Fechar">&times;</button>
+    <div style="font-size:2rem;margin-bottom:8px">&#128274;</div>
+    <h3>Ver os valores do seu plano</h3>
+    <p>Preencha seus dados para desbloquear os precos exclusivos desta proposta.</p>
+    <input id="mpNome" type="text" placeholder="Seu nome completo" autocomplete="name" required>
+    <input id="mpWhats" type="tel" placeholder="WhatsApp (com DDD)" autocomplete="tel" required>
+    <button id="mpBtn">Desbloquear precos</button>
+    <p id="mpErro" style="color:red;display:none">Preencha nome e WhatsApp</p>
+  </div>
+</div>
+
+<script>
+// Header scroll
+var header=document.getElementById('header');
+var backTop=document.getElementById('backTop');
+window.addEventListener('scroll',function(){
+  header.classList.toggle('scrolled',window.scrollY>8);
+  backTop.classList.toggle('show',window.scrollY>400);
+},{passive:true});
+backTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+// Mobile nav
+var nav=document.getElementById('nav');
+var navBd=document.getElementById('navBackdrop');
+document.getElementById('hamburger').addEventListener('click',function(){nav.classList.toggle('open');navBd.classList.toggle('open')});
+navBd.addEventListener('click',function(){nav.classList.remove('open');navBd.classList.remove('open')});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');navBd.classList.remove('open')})});
+
+// Scroll reveal
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+
+// Year
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// Supabase price unlock
+var SUPA_URL='https://zfvkevygqjxrepkdfqte.supabase.co';
+var SUPA_KEY='sb_publishable_IEliEVNtvywmdHK6VuS__Q_y4rVHpOn';
+var PROPOSTA_SLUG='www.rodrigojunqueira.com.br';
+
+if(localStorage.getItem('proposta_desbloqueada_'+PROPOSTA_SLUG)){
+  desbloquearPrecos({});
+}else{
+  setTimeout(function(){document.getElementById('modalPrecos').classList.add('ativo')},2000);
+  document.querySelectorAll('.price-lock').forEach(function(el){
+    el.style.cursor='pointer';
+    el.addEventListener('click',function(){document.getElementById('modalPrecos').classList.add('ativo')});
+  });
+}
+
+document.getElementById('mpBtn').addEventListener('click',async function(){
+  var nome=document.getElementById('mpNome').value.trim();
+  var whats=document.getElementById('mpWhats').value.trim();
+  if(!nome||!whats){document.getElementById('mpErro').style.display='block';return}
+  document.getElementById('mpErro').style.display='none';
+  var btn=document.getElementById('mpBtn');
+  btn.textContent='Aguarde...';btn.disabled=true;
+  try{
+    await fetch(SUPA_URL+'/rest/v1/mopen_proposta_leads',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY,'Prefer':'return=minimal'},
+      body:JSON.stringify({nome:nome,whatsapp:whats,proposta_slug:PROPOSTA_SLUG,origem:document.referrer||'direto',created_at:new Date().toISOString()})
+    });
+    var r=await fetch(SUPA_URL+'/rest/v1/rpc/proposta_status',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY},
+      body:JSON.stringify({slug:PROPOSTA_SLUG})
+    });
+    desbloquearPrecos((await r.json())||{});
+  }catch(e){desbloquearPrecos({});}
+  localStorage.setItem('proposta_desbloqueada_'+PROPOSTA_SLUG,'1');
+  var primeiroNome=nome.split(' ')[0];
+  var box=document.querySelector('#modalPrecos .modal-precos-box');
+  if(box)box.innerHTML='<div style="font-size:2.5rem;margin-bottom:.5rem">&#9989;</div><h3 style="color:#1e293b;margin:.5rem 0">Obrigado, '+primeiroNome+'!</h3><p style="color:#475569;margin:.5rem 0 1.5rem;font-size:.95rem">Pode fechar essa mensagem e ver os valores.</p><button onclick="document.getElementById(\'modalPrecos\').classList.remove(\'ativo\')" style="background:#0E1F3A;color:#fff;border:none;border-radius:8px;padding:.85rem 1.5rem;font-size:1rem;font-weight:700;cursor:pointer;width:100%">Fechar e ver os valores</button>';
+});
+
+function desbloquearPrecos(precos){
+  document.body.classList.remove('precos-bloqueados');
+  document.querySelectorAll('.price-lock[data-preco]').forEach(function(el){
+    var v=precos&&precos[el.getAttribute('data-preco')];
+    if(v){
+      el.textContent=v;
+      el.style.cssText='';
+    }else{
+      el.textContent='Clique para ver o preco';
+      el.style.cssText='display:inline-block;background:#0E1F3A;color:#fff;border-radius:8px;padding:.4rem 1.1rem;font-size:0.82em;font-weight:700;cursor:pointer;text-decoration:none;filter:none;vertical-align:middle;letter-spacing:.01em';
+      el.addEventListener('click',function(){
+        document.getElementById('modalPrecos').classList.add('ativo');
+      });
+    }
+  });
+}
+</script>
+</body>
+</html>
